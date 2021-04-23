@@ -26,6 +26,7 @@
     },
     "scripts": {
         "build": "lerna run build",
+        "clean": "lerna run clean",
         "bootstrap": "lerna bootstrap -- --legacy-peer-deps --no-package-lock",
         "dev": "start-storybook -p 6006",
         "pkg-dev": "lerna run --parallel storybook",
