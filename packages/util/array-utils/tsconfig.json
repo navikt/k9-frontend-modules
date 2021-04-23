@@ -1,0 +1,10 @@
+{
+  "include": ["./"],
+  "exclude": ["node_modules", "**.spec.ts"],
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "declaration": true,
+    "outDir": "./"
+  }
+}

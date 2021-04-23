@@ -1,0 +1,24 @@
+{
+    "name": "@navikt/date-utils",
+    "version": "1.0.0",
+    "description": "A collection of period utils",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "test": "jest",
+        "test-watch": "jest --watch"
+    },
+    "devDependencies": {
+        "dayjs": "^1.10.4"
+    },
+    "peerDependencies": {
+        "dayjs": "^1.10.4"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": "git://<repository-url-here",
+    "author": "NAV",
+    "license": "MIT"
+}

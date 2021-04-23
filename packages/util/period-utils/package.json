@@ -1,0 +1,30 @@
+{
+    "name": "@navikt/period-utils",
+    "version": "1.0.0",
+    "description": "A collection of period utils",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "test": "jest",
+        "test-watch": "jest --watch"
+    },
+    "dependencies": {
+        "@navikt/array-utils": "^1.0.0",
+        "@navikt/date-utils": "^1.0.0"
+    },
+    "devDependencies": {
+        "dayjs": "^1.10.4",
+        "ts-jest": "^26.5.5"
+    },
+    "peerDependencies": {
+        "dayjs": "^1.10.4"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": "https://github.com/navikt/k9-frontend-modules",
+    "author": "NAV",
+    "license": "MIT"
+}

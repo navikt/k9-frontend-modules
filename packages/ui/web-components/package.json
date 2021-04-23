@@ -1,0 +1,34 @@
+{
+    "name": "@navikt/web-components",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "storybook": "start-storybook -p 7002 --ci",
+        "build-storybook": "build-storybook"
+    },
+    "author": "NAV",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "peerDependencies": {
+        "lit-element": "^2.4.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.15",
+        "@storybook/addon-actions": "^6.3.0-alpha.2",
+        "@storybook/addon-essentials": "^6.3.0-alpha.2",
+        "@storybook/addon-links": "^6.3.0-alpha.2",
+        "@storybook/web-components": "^6.3.0-alpha.2",
+        "babel-loader": "^8.2.2",
+        "lit-element": "^2.4.0",
+        "lit-html": "^1.3.0"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": "git://<repository-url-here",
+    "exports": {
+        "require": "./dist/index.cjs.js",
+        "import": "./dist/index.js"
+    }
+}
