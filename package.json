@@ -1,7 +1,7 @@
 {
     "name": "root",
     "private": true,
-    "license": "MIT",
+    "license": "SEE LICENSE IN LICENSE",
     "author": "NAV",
     "devDependencies": {
         "@babel/core": "^7.13.15",
