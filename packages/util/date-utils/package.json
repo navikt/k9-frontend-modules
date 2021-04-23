@@ -6,6 +6,7 @@
     "types": "./dist/index.d.ts",
     "scripts": {
         "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf ./dist ./node_modules",
         "test": "jest",
         "test-watch": "jest --watch"
     },

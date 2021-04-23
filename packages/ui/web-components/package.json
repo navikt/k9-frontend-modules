@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf ./dist ./node_modules",
         "storybook": "start-storybook -p 7002 --ci",
         "build-storybook": "build-storybook"
     },
