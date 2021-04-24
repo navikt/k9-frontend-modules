@@ -1,5 +1,8 @@
+import Period from './../Period';
+
 describe('Period tests', () => {
     it('blabla', () => {
-        expect(1).toBe(1);
+        const period = new Period('2028-01-01', '2028-01-01');
+        expect(period.prettifyPeriod()).toBe('01.01.2028 - 01.01.2028');
     });
 });
