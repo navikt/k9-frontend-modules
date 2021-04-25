@@ -1,6 +1,6 @@
-const dayjs = require('dayjs');
-const customParseFormat = require('dayjs/plugin/customParseFormat');
-const utc = require('dayjs/plugin/utc');
+import * as dayjs from 'dayjs';
+import * as customParseFormat from 'dayjs/plugin/customParseFormat';
+import * as utc from 'dayjs/plugin/utc';
 
 dayjs.extend(customParseFormat);
 dayjs.extend(utc);
