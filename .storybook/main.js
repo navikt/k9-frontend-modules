@@ -14,4 +14,10 @@ module.exports = {
             url: 'http://localhost:7002',
         },
     },
+    webpackFinal: async (config) => {
+        config.module.rules.forEach((rule, ruleIndex) => {
+            config.module.rules[ruleIndex].exclude = /node_modules/;
+        });
+        return config;
+    },
 };

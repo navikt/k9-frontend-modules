@@ -7,6 +7,9 @@ module.exports = {
     ],
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
     webpackFinal: async (config) => {
+        config.module.rules.forEach((rule, ruleIndex) => {
+            config.module.rules[ruleIndex].exclude = /node_modules/;
+        });
         config.module.rules.push({
             test: /\.less$/,
             use: ['style-loader', 'css-loader', 'less-loader'],
