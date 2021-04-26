@@ -2,8 +2,8 @@
   "compilerOptions": {
     "declaration": true,
     "module": "esnext",
-    "lib": ["esnext"],
-    "target": "esnext",
+    "lib": ["es2019"],
+    "target": "es2019",
     "moduleResolution": "node",
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,

@@ -1,5 +1,7 @@
 {
     "name": "@navikt/period-utils",
+    "author": "NAV",
+    "license": "MIT",
     "version": "1.0.0",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
@@ -11,13 +13,16 @@
         "test": "jest",
         "test-watch": "jest --watch"
     },
+    "jest": {
+        "preset": "ts-jest",
+        "transform": {}
+    },
     "dependencies": {
         "@navikt/array-utils": "^1.0.0",
         "@navikt/date-utils": "^1.0.0"
     },
     "devDependencies": {
-        "dayjs": "^1.10.4",
-        "ts-jest": "^26.5.5"
+        "dayjs": "^1.10.4"
     },
     "peerDependencies": {
         "dayjs": "^1.10.4"
@@ -25,7 +30,5 @@
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },
-    "repository": "https://github.com/navikt/k9-frontend-modules",
-    "author": "NAV",
-    "license": "MIT"
+    "repository": "https://github.com/navikt/k9-frontend-modules"
 }
