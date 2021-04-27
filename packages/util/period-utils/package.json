@@ -2,7 +2,7 @@
     "name": "@navikt/period-utils",
     "author": "NAV",
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
@@ -18,8 +18,8 @@
         "transform": {}
     },
     "dependencies": {
-        "@navikt/array-utils": "^1.0.0",
-        "@navikt/date-utils": "^1.0.0"
+        "@navikt/array-utils": "^0.0.1",
+        "@navikt/date-utils": "^0.0.1"
     },
     "devDependencies": {
         "dayjs": "^1.10.4"
