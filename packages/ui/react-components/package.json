@@ -37,7 +37,10 @@
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },
-    "repository": "https://github.com/navikt/k9-frontend-modules",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/navikt/k9-frontend-modules"
+    },
     "exports": {
         "require": "./dist/index.cjs.js",
         "import": "./dist/index.js"

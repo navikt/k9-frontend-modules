@@ -19,7 +19,10 @@
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },
-    "repository": "git://<repository-url-here",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/navikt/k9-frontend-modules"
+    },
     "author": "NAV",
     "license": "MIT"
 }
