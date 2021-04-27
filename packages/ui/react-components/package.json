@@ -13,7 +13,7 @@
     "types": "./dist/index.d.ts",
     "dependencies": {
         "@navikt/date-utils": "^0.0.1",
-        "@navikt/period-utils": "^0.0.1"
+        "@navikt/period-utils": "^0.0.2"
     },
     "devDependencies": {
         "@storybook/react": "^6.3.0-alpha.14",
