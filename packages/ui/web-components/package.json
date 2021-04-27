@@ -1,6 +1,6 @@
 {
     "name": "@navikt/web-components",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",

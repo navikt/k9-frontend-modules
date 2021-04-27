@@ -1,6 +1,6 @@
 {
     "name": "@navikt/react-components",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
@@ -17,22 +17,22 @@
     },
     "devDependencies": {
         "@storybook/react": "^6.3.0-alpha.14",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
         "nav-frontend-core": "^5.1.1",
+        "nav-frontend-etiketter": "^2.1.1",
+        "nav-frontend-etiketter-style": "^1.1.1",
         "nav-frontend-typografi": "^3.1.1",
         "nav-frontend-typografi-style": "^1.1.1",
-        "nav-frontend-etiketter": "^2.1.1",
-        "nav-frontend-etiketter-style": "^1.1.1"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "peerDependencies": {
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
         "nav-frontend-core": "^5.1.1",
+        "nav-frontend-etiketter": "^2.1.1",
+        "nav-frontend-etiketter-style": "^1.1.1",
         "nav-frontend-typografi": "^3.1.1",
         "nav-frontend-typografi-style": "^1.1.1",
-        "nav-frontend-etiketter": "^2.1.1",
-        "nav-frontend-etiketter-style": "^1.1.1"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
