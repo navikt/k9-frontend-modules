@@ -1,16 +1,17 @@
+import { Dayjs } from 'dayjs';
 import {
     makeArrayWithoutDuplicates,
     getArrayDifference,
 } from '@navikt/array-utils';
-import Period from './../types/Period';
 import {
     initializeDate,
     isSameOrBefore,
     isDayAfter,
     dateSorter,
 } from '@navikt/date-utils';
+import Period from './../types/Period';
 
-export function getPeriodAsListOfDays(period: Period): string[] {
+export function getPeriodAsListOfDays(period: Period): Dayjs[] {
     const fom = initializeDate(period.fom);
     const tom = initializeDate(period.tom);
 
@@ -20,7 +21,7 @@ export function getPeriodAsListOfDays(period: Period): string[] {
         isSameOrBefore(currentDate, tom);
         currentDate = currentDate.add(1, 'day')
     ) {
-        list.push(currentDate.format('YYYY-MM-DD'));
+        list.push(currentDate);
     }
 
     return list;
