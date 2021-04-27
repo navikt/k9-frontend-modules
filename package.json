@@ -41,5 +41,9 @@
         "pkg-dev": "lerna run --parallel storybook",
         "test": "lerna run test",
         "test-watch": "lerna run --parallel test-watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/navikt/k9-frontend-modules"
     }
 }
