@@ -1,7 +1,6 @@
 import { makeArrayWithoutDuplicates, getArrayDifference } from '@navikt/array-utils';
-import { initializeDate, isSameOrBefore, isDayAfter, dateSorter } from '@navikt/date-utils';
+import { initializeDate, isSameOrBefore, isDayAfter, dateStringSorter } from '@navikt/date-utils';
 import Period from './../types/Period';
-import { dateStringSorter } from '@navikt/date-utils/src/sort';
 
 export function getPeriodAsListOfDays(period: Period): string[] {
     const fom = initializeDate(period.fom);

@@ -2,12 +2,11 @@
     "name": "@navikt/period-utils",
     "author": "NAV",
     "license": "MIT",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "type": "module",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
@@ -20,7 +19,7 @@
     },
     "dependencies": {
         "@navikt/array-utils": "^0.0.1",
-        "@navikt/date-utils": "^0.0.1"
+        "@navikt/date-utils": "^0.0.2"
     },
     "devDependencies": {
         "dayjs": "^1.10.4",
