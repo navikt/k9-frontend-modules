@@ -4,6 +4,12 @@
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "src",
+        "index.ts",
+        "package.json"
+    ],
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
