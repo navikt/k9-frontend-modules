@@ -16,6 +16,11 @@
         "test": "jest",
         "test-watch": "jest --watch"
     },
+    "jest": {
+        "preset": "ts-jest",
+        "transform": {},
+        "collectCoverage": true
+    },
     "devDependencies": {
         "dayjs": "^1.10.4"
     },

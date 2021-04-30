@@ -1,7 +1,7 @@
 import Period from './../Period';
 
 describe('Period tests', () => {
-    it('blabla', () => {
+    it('should create a period with util functions', () => {
         const period = new Period('2028-01-01', '2028-01-10');
         expect(period.fomIsBeforeOrSameAsTom()).toBe(true);
         expect(period.prettifyPeriod()).toBe('01.01.2028 - 10.01.2028');
