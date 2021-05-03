@@ -22,7 +22,8 @@
     },
     "jest": {
         "preset": "ts-jest",
-        "transform": {}
+        "transform": {},
+        "collectCoverage": true
     },
     "dependencies": {
         "@navikt/array-utils": "^0.0.1",
