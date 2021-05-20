@@ -1,5 +1,5 @@
 {
-    "name": "@navikt/array-utils",
+    "name": "@navikt/k9-array-utils",
     "version": "0.0.1",
     "description": "A collection of array utils",
     "main": "./dist/index.js",

@@ -1,5 +1,5 @@
-import { makeArrayWithoutDuplicates, getArrayDifference } from '@navikt/array-utils';
-import { initializeDate, isSameOrBefore, isDayAfter, dateStringSorter } from '@navikt/date-utils';
+import { makeArrayWithoutDuplicates, getArrayDifference } from '@navikt/k9-array-utils';
+import { initializeDate, isSameOrBefore, isDayAfter, dateStringSorter } from '@navikt/k9-date-utils';
 import Period from './../types/Period';
 
 export function getPeriodAsListOfDays(period: Period): string[] {

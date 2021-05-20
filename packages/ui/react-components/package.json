@@ -1,5 +1,5 @@
 {
-    "name": "@navikt/react-components",
+    "name": "@navikt/k9-react-components",
     "version": "0.0.1",
     "scripts": {
         "build": "rollup -c rollup.config.js",
@@ -11,10 +11,6 @@
     "license": "SEE LICENSE IN LICENSE",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "dependencies": {
-        "@navikt/date-utils": "^0.0.2",
-        "@navikt/period-utils": "^0.0.3"
-    },
     "devDependencies": {
         "@storybook/react": "^6.3.0-alpha.14",
         "nav-frontend-core": "^5.1.1",
