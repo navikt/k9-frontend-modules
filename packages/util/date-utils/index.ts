@@ -7,6 +7,7 @@ export { default as initializeDate } from './src/initialize';
 export { default as dateSorter } from './src/sort';
 export { dateStringSorter } from './src/sort';
 export { default as isValid } from './src/isValid';
+export { default as addYearsToDate } from './src/addYearsToDate';
 
 export const isDayAfter = (d1: dayjs.Dayjs, d2: dayjs.Dayjs) => {
     const dayAfterD1 = d1.add(1, 'day').utc(true).startOf('day');
