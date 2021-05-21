@@ -39,7 +39,7 @@ describe('Period tests', () => {
             let periodInQuestion = new Period(firstDayOf2028, tenthDayOf2028);
             expect(first10DaysOf2028.covers(periodInQuestion)).toBe(true);
 
-            periodInQuestion = new Period('2028-01-02', '2028-01-09');
+            periodInQuestion = new Period(secondDayOf2028, ninthDayOf2028);
             expect(first10DaysOf2028.covers(periodInQuestion)).toBe(true);
         });
 
