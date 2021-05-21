@@ -1,21 +1,9 @@
 import { makeArrayWithoutDuplicates, getArrayDifference } from '@navikt/k9-array-utils';
-import { initializeDate, isSameOrBefore, isDayAfter, dateStringSorter } from '@navikt/k9-date-utils';
+import { initializeDate, isDayAfter, dateStringSorter } from '@navikt/k9-date-utils';
 import Period from './../types/Period';
 
-export function getPeriodAsListOfDays(period: Period): string[] {
-    const fom = initializeDate(period.fom);
-    const tom = initializeDate(period.tom);
-
-    const list = [];
-    for (let currentDate = fom; isSameOrBefore(currentDate, tom); currentDate = currentDate.add(1, 'day')) {
-        list.push(currentDate.format('YYYY-MM-DD'));
-    }
-
-    return list;
-}
-
 export function getPeriodsAsListOfDays(period: Period[]): string[] {
-    const days = period.map(getPeriodAsListOfDays).flat();
+    const days = period.map((p) => p.asListOfDays()).flat();
     return makeArrayWithoutDuplicates(days);
 }
 

@@ -1,21 +1,5 @@
-import periodDifference, {
-    convertListOfDaysToPeriods,
-    getPeriodAsListOfDays,
-    getPeriodsAsListOfDays,
-} from '../getPeriodDifference';
+import periodDifference, { convertListOfDaysToPeriods, getPeriodsAsListOfDays } from '../getPeriodDifference';
 import Period from '../../types/Period';
-
-describe('getPeriodAsListOfDays', () => {
-    it('should return a list of date strings based on a provided period', () => {
-        const period = new Period('2032-01-01', '2032-01-05');
-        const result = getPeriodAsListOfDays(period);
-
-        expect(result.length).toBe(5);
-
-        const includesAllDates = result.every((day) => period.includesDate(day));
-        expect(includesAllDates).toBe(true);
-    });
-});
 
 describe('getPeriodsAsListOfDays', () => {
     it('should return a list of date strings based on a provided list of periods', () => {
