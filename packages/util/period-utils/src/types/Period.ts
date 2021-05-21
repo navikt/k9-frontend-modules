@@ -1,4 +1,4 @@
-import { initializeDate, prettifyDateString } from '@navikt/date-utils';
+import { initializeDate, prettifyDateString } from '@navikt/k9-date-utils';
 
 class Period {
     fom: string;
@@ -11,9 +11,7 @@ class Period {
     }
 
     prettifyPeriod() {
-        return `${prettifyDateString(this.fom)} - ${prettifyDateString(
-            this.tom
-        )}`;
+        return `${prettifyDateString(this.fom)} - ${prettifyDateString(this.tom)}`;
     }
 
     includesDate(dateString: string) {
@@ -21,40 +19,25 @@ class Period {
         const fomDayjs = initializeDate(this.fom);
         const tomDayjs = initializeDate(this.tom);
         return (
-            (dateInQuestion.isSame(fomDayjs) ||
-                dateInQuestion.isAfter(fomDayjs)) &&
-            (dateInQuestion.isSame(tomDayjs) ||
-                dateInQuestion.isBefore(tomDayjs))
+            (dateInQuestion.isSame(fomDayjs) || dateInQuestion.isAfter(fomDayjs)) &&
+            (dateInQuestion.isSame(tomDayjs) || dateInQuestion.isBefore(tomDayjs))
         );
     }
 
     covers(otherPeriod: Period) {
-        return (
-            this.includesDate(otherPeriod.fom) &&
-            this.includesDate(otherPeriod.tom)
-        );
+        return this.includesDate(otherPeriod.fom) && this.includesDate(otherPeriod.tom);
     }
 
     overlapsLeft(otherPeriod: Period) {
-        return (
-            this.includesDate(otherPeriod.fom) &&
-            !this.includesDate(otherPeriod.tom)
-        );
+        return this.includesDate(otherPeriod.fom) && !this.includesDate(otherPeriod.tom);
     }
 
     overlapsRight(otherPeriod) {
-        return (
-            this.includesDate(otherPeriod.tom) &&
-            !this.includesDate(otherPeriod.fom)
-        );
+        return this.includesDate(otherPeriod.tom) && !this.includesDate(otherPeriod.fom);
     }
 
     overlapsWith(otherPeriod) {
-        return (
-            this.covers(otherPeriod) ||
-            this.overlapsLeft(otherPeriod) ||
-            this.overlapsRight(otherPeriod)
-        );
+        return this.covers(otherPeriod) || this.overlapsLeft(otherPeriod) || this.overlapsRight(otherPeriod);
     }
 
     startsBefore(otherPeriod: Period) {
@@ -70,9 +53,7 @@ class Period {
     }
 
     overlapsWithSomePeriodInList(periodList: Period[]) {
-        return periodList.some((currentPeriod) =>
-            this.overlapsWith(currentPeriod)
-        );
+        return periodList.some((currentPeriod) => this.overlapsWith(currentPeriod));
     }
 
     fomIsBeforeOrSameAsTom() {

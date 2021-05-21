@@ -1,5 +1,5 @@
 {
-    "name": "@navikt/date-utils",
+    "name": "@navikt/k9-date-utils",
     "version": "0.0.2",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
