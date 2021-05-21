@@ -1,4 +1,4 @@
-import { initializeDate, prettifyDateString } from '@navikt/k9-date-utils';
+import { initializeDate, prettifyDateString, isSameOrBefore, isValid } from '@navikt/k9-date-utils';
 
 class Period {
     fom: string;
@@ -60,6 +60,33 @@ class Period {
         const fomDate = initializeDate(this.fom);
         const tomDate = initializeDate(this.tom);
         return fomDate.isBefore(tomDate) || fomDate.isSame(tomDate);
+    }
+
+    asListOfDays() {
+        const fomDayjs = initializeDate(this.fom);
+        const tomDayjs = initializeDate(this.tom);
+
+        const list = [];
+        for (
+            let currentDate = fomDayjs;
+            isSameOrBefore(currentDate, tomDayjs);
+            currentDate = currentDate.add(1, 'day')
+        ) {
+            list.push(currentDate.format('YYYY-MM-DD'));
+        }
+
+        return list;
+    }
+
+    isValid() {
+        return isValid(this.fom) && isValid(this.tom);
+    }
+
+    asInternationalPeriod() {
+        return {
+            from: this.fom,
+            to: this.tom,
+        };
     }
 }
 
