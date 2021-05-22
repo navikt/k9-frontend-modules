@@ -1,5 +1,5 @@
 import styles from 'rollup-plugin-styles';
-import commonPackageBuild from './../../../build/commonPackageBuild.config';
+import commonPackageBuild from './../../../config/commonPackageBuild.config';
 
 commonPackageBuild.plugins.unshift(styles());
 

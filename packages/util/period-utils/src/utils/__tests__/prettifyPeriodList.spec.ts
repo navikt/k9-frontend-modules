@@ -1,5 +1,5 @@
 import Period from '../../types/Period';
-import { prettifyPeriodList } from '../prettifyPeriodList';
+import prettifyPeriodList from '../prettifyPeriodList';
 
 describe('prettifyPeriodList', () => {
     it("should prettify a list of periods on the format DD.MM.YYYY-DD.MM.YYYY, with each period separated by ', '", () => {
