@@ -6,3 +6,5 @@ export { default as NavigationWithDetailView } from './src/navigation-with-detai
 export { default as Autocomplete } from './src/autocomplete/index';
 export { default as Box, Margin } from './src/box/Box';
 export { default as Form } from './src/form/Form';
+export { default as PageContainer } from './src/page-container/PageContainer';
+export { default as PageError } from './src/page-error/PageError';
