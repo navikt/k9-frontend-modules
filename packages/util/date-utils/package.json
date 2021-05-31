@@ -1,12 +1,11 @@
 {
     "name": "@navikt/k9-date-utils",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "files": [
         "dist",
-        "src",
         "index.ts",
         "package.json"
     ],

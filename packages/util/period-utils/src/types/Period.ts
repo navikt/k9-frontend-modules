@@ -1,4 +1,5 @@
-import { initializeDate, prettifyDateString, isSameOrBefore, isValid } from '@navikt/k9-date-utils';
+import * as dateUtils from '@navikt/k9-date-utils';
+const { initializeDate, prettifyDateString, isSameOrBefore } = dateUtils;
 
 class Period {
     fom: string;
@@ -79,7 +80,7 @@ class Period {
     }
 
     isValid() {
-        return isValid(this.fom) && isValid(this.tom);
+        return dateUtils.isValid(this.fom) && dateUtils.isValid(this.tom);
     }
 
     asInternationalPeriod() {
