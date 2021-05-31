@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-date-utils",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -15,11 +15,6 @@
         "clean": "rm -rf ./dist ./node_modules",
         "test": "jest --passWithNoTests",
         "test-watch": "jest --watch"
-    },
-    "jest": {
-        "preset": "ts-jest",
-        "transform": {},
-        "collectCoverage": true
     },
     "devDependencies": {
         "dayjs": "^1.10.4"

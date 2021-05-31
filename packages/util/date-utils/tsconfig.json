@@ -5,6 +5,7 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "declaration": true,
-    "outDir": "./"
+    "outDir": "./",
+    "allowJs": true
   }
 }

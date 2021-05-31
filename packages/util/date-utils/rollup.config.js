@@ -1,3 +1,3 @@
-import commonPackageBuild from './../../../build/commonPackageBuild.config';
+import commonPackageBuild from './../../../config/commonPackageBuild.config';
 
 export default commonPackageBuild;

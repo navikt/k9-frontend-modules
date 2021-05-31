@@ -17,6 +17,12 @@
         "index.ts",
         "package.json"
     ],
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf ./dist ./node_modules",
+        "storybook": "start-storybook -p 7001 --ci",
+        "test": "jest --passWithNoTests"
+    },
     "devDependencies": {
         "@storybook/react": "^6.3.0-alpha.14",
         "classnames": "^2.3.1",
