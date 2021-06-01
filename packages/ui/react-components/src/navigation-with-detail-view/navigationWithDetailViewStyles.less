@@ -1,18 +1,20 @@
 .navigationWithDetailView {
-  display: flex;
-  align-items: baseline;
-
-  &__navigationSection {
     display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    min-width: 17.5rem;
-  }
+    align-items: flex-start;
 
-  &__detailSection {
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin-left: 2rem;
-    flex-basis: 66%;
-  }
+    &__navigationSection {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        min-width: 25.3125rem;
+        border-radius: 0.25rem;
+        border: 1px solid #c6c2bf;
+    }
+
+    &__detailSection {
+        flex-wrap: wrap;
+        flex-grow: 1;
+        margin-left: 1.25rem;
+        flex-basis: 66%;
+    }
 }
