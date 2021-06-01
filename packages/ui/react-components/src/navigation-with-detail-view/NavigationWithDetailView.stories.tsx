@@ -12,6 +12,7 @@ const Template: Story<ComponentProps<typeof NavigationWithDetailView>> = (args) 
     <NavigationWithDetailView
         {...args}
         navigationSection={() => <p>Navigasjon</p>}
+        showDetailSection={true}
         detailSection={() => (
             <DetailView title="Tittel">
                 <p>Detaljer</p>

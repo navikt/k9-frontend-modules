@@ -10,12 +10,7 @@ export interface DetailViewProps {
     className?: string;
 }
 
-const DetailView = ({
-    title,
-    children,
-    contentAfterTitleRenderer,
-    className,
-}: DetailViewProps) => {
+const DetailView = ({ title, children, contentAfterTitleRenderer, className }: DetailViewProps) => {
     const cls = classnames('detailView', {
         [className]: !!className,
     });
@@ -24,9 +19,7 @@ const DetailView = ({
             <div className="detailView__titleContainer">
                 <Undertittel>{title}</Undertittel>
                 {contentAfterTitleRenderer && (
-                    <div className="detailView__nextToTitle">
-                        {contentAfterTitleRenderer()}
-                    </div>
+                    <div className="detailView__nextToTitle">{contentAfterTitleRenderer()}</div>
                 )}
             </div>
             {children}
