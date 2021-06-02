@@ -1,11 +1,11 @@
 {
     "name": "@navikt/k9-react-components",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
         "storybook": "start-storybook -p 7001 --ci",
-        "build-storybook": "build-storybook"
+        "test": "jest --passWithNoTests"
     },
     "author": "NAV IT",
     "license": "SEE LICENSE IN LICENSE",
@@ -16,16 +16,13 @@
         "index.ts",
         "package.json"
     ],
-    "scripts": {
-        "build": "rollup -c rollup.config.js",
-        "clean": "rm -rf ./dist ./node_modules",
-        "storybook": "start-storybook -p 7001 --ci",
-        "test": "jest --passWithNoTests"
-    },
     "devDependencies": {
+        "@navikt/fnrvalidator": "^1.1.4",
         "@storybook/react": "^6.3.0-alpha.14",
         "classnames": "^2.3.1",
+        "dayjs": "^1.10.5",
         "lodash.throttle": "^4.1.1",
+        "nav-datovelger": "^11.3.0",
         "nav-frontend-alertstriper": "^4.0.1",
         "nav-frontend-alertstriper-style": "^3.0.1",
         "nav-frontend-core": "^6.0.1",
@@ -35,19 +32,29 @@
         "nav-frontend-js-utils": "^1.0.19",
         "nav-frontend-knapper": "^3.0.1",
         "nav-frontend-knapper-style": "^2.0.1",
+        "nav-frontend-lenker": "^2.0.1",
+        "nav-frontend-lenker-style": "^2.0.1",
         "nav-frontend-paneler": "^3.0.1",
         "nav-frontend-paneler-style": "^2.0.1",
+        "nav-frontend-skjema": "^4.0.1",
+        "nav-frontend-skjema-style": "^3.0.1",
         "nav-frontend-spinner": "^3.0.1",
         "nav-frontend-spinner-style": "^1.0.2",
         "nav-frontend-typografi": "^4.0.1",
         "nav-frontend-typografi-style": "^2.0.1",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
-        "react-dom": "^17.0.2"
+        "react-collapse": "^5.1.0",
+        "react-day-picker": "^7.4.10",
+        "react-dom": "^17.0.2",
+        "react-hook-form": "^6.15.5"
     },
     "peerDependencies": {
+        "@navikt/fnrvalidator": "^1.1.4",
         "classnames": "^2.3.1",
+        "dayjs": "^1.10.5",
         "lodash.throttle": "^4.1.1",
+        "nav-datovelger": "^11.3.0",
         "nav-frontend-alertstriper": "^4.0.1",
         "nav-frontend-alertstriper-style": "^3.0.1",
         "nav-frontend-core": "^6.0.1",
@@ -57,15 +64,25 @@
         "nav-frontend-js-utils": "^1.0.19",
         "nav-frontend-knapper": "^3.0.1",
         "nav-frontend-knapper-style": "^2.0.1",
+        "nav-frontend-lenker": "^2.0.1",
+        "nav-frontend-lenker-style": "^2.0.1",
         "nav-frontend-paneler": "^3.0.1",
         "nav-frontend-paneler-style": "^2.0.1",
+        "nav-frontend-skjema": "^4.0.1",
+        "nav-frontend-skjema-style": "^3.0.1",
         "nav-frontend-spinner": "^3.0.1",
         "nav-frontend-spinner-style": "^1.0.2",
         "nav-frontend-typografi": "^4.0.1",
         "nav-frontend-typografi-style": "^2.0.1",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
-        "react-dom": "^17.0.2"
+        "react-collapse": "^5.1.0",
+        "react-day-picker": "^7.4.10",
+        "react-dom": "^17.0.2",
+        "react-hook-form": "^6.15.5"
+    },
+    "dependencies": {
+        "@navikt/k9-period-utils": "^0.0.5"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
