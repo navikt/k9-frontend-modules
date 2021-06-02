@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Hovedknapp, Knapp } from 'nav-frontend-knapper';
 import Box, { Margin } from '../box/Box';
 import './form.less';
