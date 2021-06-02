@@ -1,4 +1,4 @@
-import dayjs, { Dayjs } from 'dayjs';
+import { Dayjs } from 'dayjs';
 import initializeDate from './initialize';
 
 const prettyDateFormat = 'DD.MM.YYYY';
@@ -11,8 +11,4 @@ export function prettifyDate(date: Dayjs) {
 export function prettifyDateString(dateString: string) {
     const dateObject = initializeDate(dateString);
     return prettifyDate(dateObject);
-}
-
-export function dateFromString(dateString: string) {
-    return dayjs(dateString, dateFormats).utc(true);
 }

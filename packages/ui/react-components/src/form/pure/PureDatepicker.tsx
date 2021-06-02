@@ -3,7 +3,7 @@ import { Datepicker } from 'nav-datovelger';
 import { CalendarPlacement } from 'nav-datovelger/lib/types';
 import { DatepickerProps } from 'nav-datovelger/lib/Datepicker';
 import { Label } from 'nav-frontend-skjema';
-import './periodpicker.less';
+import './datepicker.less';
 import FieldError from '../../field-error/FieldError';
 
 interface CustomDatepickerProps {
@@ -29,7 +29,7 @@ const PureDatepicker = ({
     const dayPickerProps = limitations?.minDate ? { initialMonth: new Date(limitations.minDate) } : undefined;
 
     return (
-        <div className="periodpicker">
+        <div className="datepicker">
             {label && <Label htmlFor={inputId}>{label}</Label>}
             <Datepicker
                 onChange={onChange}

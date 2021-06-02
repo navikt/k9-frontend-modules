@@ -17,7 +17,6 @@ export { default as ExpandableLabel } from './src/expandable-label/ExpandableLab
 export { default as FieldError } from './src/field-error/FieldError';
 export { default as CheckboxGroup } from './src/form/wrappers/CheckboxGroup';
 export { default as Datepicker } from './src/form/wrappers/Datepicker';
-export { default as DiagnosekodeSelektor } from './src/form/wrappers/DiagnosekodeSelector';
 export { default as PeriodpickerList } from './src/form/wrappers/PeriodpickerList';
 export { default as RadioGroupPanel } from './src/form/wrappers/RadioGroupPanel';
 export { default as TextArea } from './src/form/wrappers/TextArea';
