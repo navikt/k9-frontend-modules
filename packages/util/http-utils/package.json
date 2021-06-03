@@ -1,0 +1,33 @@
+{
+    "name": "@navikt/k9-http-utils",
+    "author": "NAV",
+    "license": "MIT",
+    "version": "0.0.1",
+    "description": "A collection of HTTP utils",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "index.ts",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf ./dist ./node_modules",
+        "test": "jest --passWithNoTests",
+        "test-watch": "jest --watch"
+    },
+    "devDependencies": {
+        "axios": "^0.21.1"
+    },
+    "peerDependencies": {
+        "axios": "^0.21.1"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/navikt/k9-frontend-modules"
+    }
+}
