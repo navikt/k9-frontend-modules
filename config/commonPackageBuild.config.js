@@ -1,4 +1,5 @@
 import typescript from '@rollup/plugin-typescript';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default {
     input: 'index.ts',
@@ -11,6 +12,7 @@ export default {
         { sourcemap: true, file: './dist/index.js' },
     ],
     plugins: [
+        peerDepsExternal(),
         typescript({
             tsconfig: './tsconfig.json',
         }),

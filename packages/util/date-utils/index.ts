@@ -1,7 +1,6 @@
 import dayjs from 'dayjs';
 
-export { prettifyDate } from './src/format';
-export { prettifyDateString } from './src/format';
+export { prettifyDateString, prettifyDate } from './src/format';
 
 export { default as initializeDate } from './src/initialize';
 export { default as dateSorter } from './src/sort';
