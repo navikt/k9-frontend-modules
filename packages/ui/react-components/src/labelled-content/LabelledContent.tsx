@@ -5,11 +5,14 @@ import './labelledContent.less';
 interface LabelledContentProps {
     label: string | React.ReactNode;
     content: React.ReactNode;
+    labelTag?: string;
 }
 
-const LabelledContent = ({ label, content }: LabelledContentProps) => (
+const LabelledContent = ({ label, content, labelTag }: LabelledContentProps) => (
     <div className="labelledContent">
-        <Element className="labelledContent__label">{label}</Element>
+        <Element className="labelledContent__label" tag={labelTag || 'p'}>
+            {label}
+        </Element>
         <div className="labelledContent__content">{content}</div>
     </div>
 );
