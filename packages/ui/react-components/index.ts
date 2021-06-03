@@ -1,3 +1,4 @@
+/** Vanlige react-komponenter **/
 export { default as ContentWithTooltip } from './src/content-with-tooltip/ContentWithTooltip';
 export { default as DetailView, DetailViewProps } from './src/detail-view/DetailView';
 export { default as IndicatorWithOverlay } from './src/indicator-with-overlay/IndicatorWithOverlay';
@@ -15,12 +16,16 @@ export { default as LinkButton } from './src/link-button/LinkButton';
 export { default as TitleWithUnderline } from './src/title-with-underline/TitleWithUnderline';
 export { default as ExpandableLabel } from './src/expandable-label/ExpandableLabel';
 export { default as FieldError } from './src/field-error/FieldError';
+
+/** react-hook-form-komponenter **/
 export { default as CheckboxGroup } from './src/form/wrappers/CheckboxGroup';
 export { default as Datepicker } from './src/form/wrappers/Datepicker';
 export { default as PeriodpickerList } from './src/form/wrappers/PeriodpickerList';
 export { default as RadioGroupPanel } from './src/form/wrappers/RadioGroupPanel';
 export { default as TextArea } from './src/form/wrappers/TextArea';
 export { default as YesOrNoQuestion } from './src/form/wrappers/YesOrNoQuestion';
+
+/** Ikoner **/
 export { default as ArrowIcon } from './src/icons/ArrowIcon';
 export { default as BucketIcon } from './src/icons/BucketIcon';
 export { default as CalendarIcon } from './src/icons/CalendarIcon';
