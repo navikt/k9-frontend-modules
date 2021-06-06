@@ -16,6 +16,7 @@ export { default as LinkButton } from './src/link-button/LinkButton';
 export { default as TitleWithUnderline } from './src/title-with-underline/TitleWithUnderline';
 export { default as ExpandableLabel } from './src/expandable-label/ExpandableLabel';
 export { default as FieldError } from './src/field-error/FieldError';
+export { default as Infostripe } from './src/infostripe/Infostripe';
 
 /** react-hook-form-komponenter **/
 export { default as CheckboxGroup } from './src/form/wrappers/CheckboxGroup';
