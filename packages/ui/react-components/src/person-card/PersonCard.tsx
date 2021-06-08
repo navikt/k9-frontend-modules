@@ -1,4 +1,4 @@
-import { bemUtils } from '@navikt/k9-bem-utils';
+import bemUtils from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
 import * as React from 'react';
 import Clipboard from '../clipboard/Clipboard';
@@ -6,7 +6,7 @@ import Popover from '../popover/popover';
 import Card from './Card';
 import GenderIcon from './GenderIcon';
 import Menu from './Menu';
-import './PersonCardStyles';
+import './personCardStyles.less';
 
 export type GenderType = 'male' | 'female' | 'unknown';
 export enum Gender {

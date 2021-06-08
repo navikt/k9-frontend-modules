@@ -1,5 +1,5 @@
 import React from 'react';
-import { bemUtils } from '@navikt/k9-bem-utils';
+import bemUtils from '@navikt/k9-bem-utils';
 import ClipboardIcon from './ClipboardIcon';
 import copyContentsToClipboard from './util';
 import './clipboardStyles.less';

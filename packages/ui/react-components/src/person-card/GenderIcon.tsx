@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { bemUtils } from '@navikt/k9-bem-utils';
+import bemUtils from '@navikt/k9-bem-utils';
 import { GenderType } from './PersonCard';
 import BarnIcon from './images/barn';
 import MannIcon from './images/mann';

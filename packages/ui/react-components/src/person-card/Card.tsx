@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { bemUtils } from '@navikt/k9-bem-utils';
+import bemUtils from '@navikt/k9-bem-utils';
 import './cardStyles.less';
 
 const cardCls = bemUtils('card');
