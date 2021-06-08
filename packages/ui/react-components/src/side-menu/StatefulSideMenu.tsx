@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SideMenu, { Link, ThemeProp } from './index';
+import SideMenu, { Link, ThemeProp } from './SideMenu';
 
 interface StatefulSideMenuProps {
     heading?: string;

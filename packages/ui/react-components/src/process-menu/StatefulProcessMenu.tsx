@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StepType } from './StepType';
-import ProcessMenu from './index';
+import ProcessMenu from './ProcessMenu';
 
 interface StepProps {
     label: string;

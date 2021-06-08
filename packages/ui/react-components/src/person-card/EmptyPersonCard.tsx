@@ -1,6 +1,6 @@
+import React from 'react';
 import bemUtils from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
-import React from 'react';
 import Card from './Card';
 import GenderIcon from './GenderIcon';
 

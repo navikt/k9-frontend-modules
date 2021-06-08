@@ -1,7 +1,7 @@
 import bem from '@navikt/k9-bem-utils';
 import * as React from 'react';
 import { Systemerknapp } from 'nav-frontend-ikonknapper';
-import './systemButtonStyles';
+import './systemButton.less';
 
 const systemsCls = bem('systems');
 

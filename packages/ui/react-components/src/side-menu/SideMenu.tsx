@@ -3,9 +3,9 @@ import { Normaltekst } from 'nav-frontend-typografi';
 import * as React from 'react';
 import classnames from 'classnames';
 import MenuLink from './MenuLink';
-import './indexStyles.less';
+import './sideMenu.less';
 
-const sideMenuCls = bem('side-menu');
+const sideMenuCls = bem('sideMenu');
 
 export interface Link {
     label: string;

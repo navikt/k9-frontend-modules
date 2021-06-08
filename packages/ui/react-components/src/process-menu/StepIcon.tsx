@@ -2,10 +2,10 @@ import bem from '@navikt/k9-bem-utils';
 import * as React from 'react';
 import classnames from 'classnames';
 import { StepType } from './StepType';
-import './stepStyles.less';
-import CheckIcon from './assets/images/check';
-import AdvarselIcon from './assets/images/advarsel';
-import AvslåttValgIcon from './assets/images/avslaatt_valgt';
+import CheckIcon from './icons/CheckIcon';
+import WarningIcon from './icons/WarningIcon';
+import AvslåttValgIcon from './icons/AvslåttIcon';
+import './step.less';
 
 interface StepIconProps {
     type: string;
@@ -35,7 +35,7 @@ const StepIcon = ({ type, isFinished, iconAltText, usePartialStatus }: StepIconP
         return <CheckIcon className={stepCls.elementWithModifier('icon', 'success')} />;
     }
     if (isWarning) {
-        return <AdvarselIcon className={stepCls.elementWithModifier('icon', 'warning')} />;
+        return <WarningIcon className={stepCls.elementWithModifier('icon', 'warning')} />;
     }
     if (isDanger) {
         return <AvslåttValgIcon className={stepCls.elementWithModifier('icon', 'danger')} />;

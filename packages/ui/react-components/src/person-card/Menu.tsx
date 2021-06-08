@@ -1,7 +1,7 @@
 import * as React from 'react';
 import bemUtils from '@navikt/k9-bem-utils';
-import './menuStyles.less';
-import AnnetIcon from './images/annet';
+import OtherIcon from './icons/Other';
+import './menu.less';
 
 const menuCls = bemUtils('menu');
 
@@ -20,7 +20,7 @@ const Menu = ({ onClick, isOpen }: MenuProps): JSX.Element => {
             aria-expanded={isOpen}
             aria-label="Meny"
         >
-            <AnnetIcon />
+            <OtherIcon />
         </button>
     );
 };

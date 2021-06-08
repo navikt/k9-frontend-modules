@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const AvslåttValgIcon = ({ className }) => (
+const AvslåttIcon = ({ className }) => (
     <svg width="28px" height="28px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" className={className}>
         <title>Oppgave løst/avslått</title>
         <defs></defs>
@@ -12,4 +12,4 @@ const AvslåttValgIcon = ({ className }) => (
     </svg>
 );
 
-export default AvslåttValgIcon;
+export default AvslåttIcon;

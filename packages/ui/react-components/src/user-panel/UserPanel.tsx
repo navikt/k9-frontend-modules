@@ -2,7 +2,7 @@ import * as React from 'react';
 import bem from '@navikt/k9-bem-utils';
 import { NedChevron, OppChevron } from 'nav-frontend-chevron';
 import { Normaltekst as Text } from 'nav-frontend-typografi';
-import './userPanelStyles.less';
+import './userPanel.less';
 
 const userCls = bem('user');
 

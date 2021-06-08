@@ -17,7 +17,6 @@ export default {
 
 const Template: Story<ComponentProps<typeof Form>> = (args) => {
     const formMethods = useForm();
-
     return (
         <FormProvider {...formMethods}>
             <Form {...args} buttonLabel="Lagre">

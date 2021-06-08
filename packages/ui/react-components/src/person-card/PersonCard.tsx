@@ -2,11 +2,11 @@ import bemUtils from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
 import * as React from 'react';
 import Clipboard from '../clipboard/Clipboard';
-import Popover from '../popover/popover';
+import Popover from '../popover/Popover';
 import Card from './Card';
 import GenderIcon from './GenderIcon';
 import Menu from './Menu';
-import './personCardStyles.less';
+import './personCard.less';
 
 export type GenderType = 'male' | 'female' | 'unknown';
 export enum Gender {
@@ -27,7 +27,7 @@ export interface PersonCardData {
     childAge?: string | React.ReactNode;
 }
 
-const personCardCls = bemUtils('person-card');
+const personCardCls = bemUtils('personCard');
 
 const PersonCard = ({
     name,

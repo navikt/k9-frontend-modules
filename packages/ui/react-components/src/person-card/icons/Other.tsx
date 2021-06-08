@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AnnetIcon = () => (
+const OtherIcon = () => (
     <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(-391.000000, -18.000000)" fill="#3E3832">
@@ -14,4 +14,4 @@ const AnnetIcon = () => (
     </svg>
 );
 
-export default AnnetIcon;
+export default OtherIcon;

@@ -2,7 +2,7 @@ import bem from '@navikt/k9-bem-utils';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import * as React from 'react';
-import './MenuLinkStyles.less';
+import './menuLink.less';
 
 interface MenuLinkProps {
     label: string;
@@ -13,7 +13,7 @@ interface MenuLinkProps {
     theme?: string;
 }
 
-const menuLinkCls = bem('menu-link');
+const menuLinkCls = bem('menuLink');
 
 const MenuLink = ({ label, active, onClick, iconSrc, iconAltText, theme }: MenuLinkProps): JSX.Element => {
     const arrowTheme = theme === 'arrow';

@@ -1,8 +1,8 @@
 import React from 'react';
 import bem from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
-import BoxedList from './../boxed-list';
-import './list.less';
+import BoxedList from './../boxed-list/BoxedList';
+import './boxedListWithLinks.less';
 
 interface ListItemProps {
     /** Display name for link */

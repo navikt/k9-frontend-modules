@@ -1,10 +1,10 @@
+import * as React from 'react';
 import bem from '@navikt/k9-bem-utils';
 import classnames from 'classnames';
 import { Normaltekst } from 'nav-frontend-typografi';
-import * as React from 'react';
 import StepIcon from './StepIcon';
-import './stepStyles.less';
 import { StepType } from './StepType';
+import './step.less';
 
 export interface StepProps {
     label: string;

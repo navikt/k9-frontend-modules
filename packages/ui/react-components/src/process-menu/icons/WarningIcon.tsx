@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const AdvarselIcon = ({ className }) => (
+const WarningIcon = ({ className }) => (
     <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className={className}>
         <title>Behandlet - Manuell oppgave</title>
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -19,4 +19,4 @@ const AdvarselIcon = ({ className }) => (
     </svg>
 );
 
-export default AdvarselIcon;
+export default WarningIcon;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const KvinneIcon = () => (
+const WomanIcon = () => (
     <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <title>Kvinne</title>
         <defs></defs>
@@ -22,4 +22,4 @@ const KvinneIcon = () => (
     </svg>
 );
 
-export default KvinneIcon;
+export default WomanIcon;

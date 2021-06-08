@@ -1,5 +1,5 @@
 /** Vanlige react-komponenter **/
-export { default as BoxedList } from './src/boxed-list';
+export { default as BoxedList } from './src/boxed-list/BoxedList';
 export { default as BoxedListWithLinks } from './src/boxed-list-with-links/BoxedListWithLinks';
 export { default as BoxedListWithSelection } from './src/boxed-list-with-selection/BoxedListWithSelection';
 export { default as ContentWithTooltip } from './src/content-with-tooltip/ContentWithTooltip';
@@ -21,12 +21,12 @@ export { default as TitleWithUnderline } from './src/title-with-underline/TitleW
 export { default as ExpandableLabel } from './src/expandable-label/ExpandableLabel';
 export { default as ExpandablePanel } from './src/expandable-panel/ExpandablePanel';
 export { default as FieldError } from './src/field-error/FieldError';
-export { default as Header } from './src/header';
-export { default as Popover } from './src/popover/popover';
-export { default as ProcessMenu } from './src/process-menu';
+export { default as Header } from './src/header/Header';
+export { default as Popover } from './src/popover/Popover';
+export { default as ProcessMenu } from './src/process-menu/ProcessMenu';
 export { default as StatefulProcessMenu } from './src/process-menu/StatefulProcessMenu';
 export { default as Step } from './src/process-menu/Step';
-export { default as SideMenu } from './src/side-menu';
+export { default as SideMenu } from './src/side-menu/SideMenu';
 export { default as StatefulSideMenu } from './src/side-menu/StatefulSideMenu';
 export { default as PersonCard, Gender } from './src/person-card/PersonCard';
 export { default as EmptyPersonCard } from './src/person-card/EmptyPersonCard';

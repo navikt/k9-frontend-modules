@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const UkjentIcon = () => (
+const UnknownIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165.4 162.59">
         <defs></defs>
         <title>Ukjent kjønn</title>
@@ -11,4 +11,4 @@ const UkjentIcon = () => (
     </svg>
 );
 
-export default UkjentIcon;
+export default UnknownIcon;
