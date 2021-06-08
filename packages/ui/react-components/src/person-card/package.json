@@ -1,0 +1,29 @@
+{
+    "version": "1.1.4",
+    "name": "@navikt/nap-person-card",
+    "author": "NAV",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "npm run clean && npm run copy-less && npm run copy-svg && npm run tsc",
+        "tsc": "tsc -p tsconfig.json",
+        "clean": "rm -rf ./dist",
+        "copy-less": "copyfiles -u 1 src/*.less dist",
+        "copy-svg": "copyfiles -u 1 src/**/*.svg dist"
+    },
+    "bugs": {
+        "url": "https://github.com/navikt/not-a-platform/issues"
+    },
+    "dependencies": {
+        "@navikt/nap-bem-utils": "1.0.1",
+        "@navikt/nap-clipboard": "1.0.1",
+        "@navikt/nap-popover": "1.0.6",
+        "nav-frontend-typografi": "^2.0.17",
+        "nav-frontend-typografi-style": "^1.0.18"
+    },
+    "peerDependencies": {
+        "react": "^16.11.0"
+    }
+}

@@ -1,4 +1,5 @@
 /** Vanlige react-komponenter **/
+export { default as BoxedListWithLinks } from './src/boxed-list-with-links';
 export { default as ContentWithTooltip } from './src/content-with-tooltip/ContentWithTooltip';
 export { default as DetailView, DetailViewProps } from './src/detail-view/DetailView';
 export { default as IndicatorWithOverlay } from './src/indicator-with-overlay/IndicatorWithOverlay';

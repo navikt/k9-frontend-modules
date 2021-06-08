@@ -1,0 +1,32 @@
+{
+    "version": "1.0.7",
+    "name": "@navikt/nap-side-menu",
+    "author": "NAV",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "npm run clean && npm run copy-less && npm run copy-svg && npm run tsc",
+        "tsc": "tsc -p tsconfig.json",
+        "clean": "rm -rf ./dist",
+        "copy-less": "copyfiles -u 1 src/*.less dist",
+        "copy-svg": "copyfiles -u 1 src/**/*.svg dist"
+    },
+    "bugs": {
+        "url": "https://github.com/navikt/not-a-platform/issues"
+    },
+    "dependencies": {
+        "@navikt/nap-bem-utils": "1.0.1",
+        "classnames": "^2.2.6",
+        "nav-frontend-typografi": "^2.0.16",
+        "nav-frontend-typografi-style": "^1.0.17"
+    },
+    "devDependencies": {
+        "less": "^3.10.3",
+        "less-watch-compiler": "^1.14.1"
+    },
+    "peerDependencies": {
+        "react": "^16.11.0"
+    }
+}

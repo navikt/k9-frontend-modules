@@ -1,0 +1,26 @@
+{
+    "name": "@navikt/nap-user-panel",
+    "version": "1.1.0",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "module": "dist/index.js",
+    "scripts": {
+        "build": "npm run clean && npm run copy-less && npm run tsc",
+        "clean": "rm -rf ./dist",
+        "copy-less": "copyfiles -u 1 src/**/*.less dist",
+        "tsc": "tsc -p tsconfig.json"
+    },
+    "keywords": [],
+    "author": "NAV",
+    "license": "MIT",
+    "dependencies": {
+        "@navikt/nap-bem-utils": "1.0.1",
+        "nav-frontend-chevron": "^1.0.28",
+        "nav-frontend-chevron-style": "^1.0.4",
+        "nav-frontend-typografi": "^3.0.3",
+        "nav-frontend-typografi-style": "^1.0.34"
+    },
+    "peerDependencies": {
+        "react": "^16.11.0"
+    }
+}

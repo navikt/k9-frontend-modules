@@ -1,0 +1,242 @@
+.step {
+    flex: 1;
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+
+    &__button {
+        padding: 8px 0 6px;
+        background: transparent;
+        cursor: pointer;
+        height: 48px;
+        border: none;
+        border-radius: 4px;
+
+        flex: 1;
+        color: #3e3832;
+
+        &:disabled {
+            color: #3e3832;
+        }
+
+        &:hover {
+            background-color: #e7e9e9;
+
+            .step__indicator--default {
+                border: solid 1px #78706a;
+                background-color: #78706a;
+            }
+
+            .step__indicator--success {
+                border: solid 1px #1c6937;
+                background-color: #1c6937;
+
+                &.step__indicator--partial {
+                    background: repeating-linear-gradient(-45deg, #1c6937, #1c6937 10px, #fff 10px, #fff 20px);
+                }
+            }
+            .step__indicator--warning {
+                border: solid 1px #b26d14;
+                background-color: #ffa733;
+
+                &.step__indicator--partial {
+                    background: repeating-linear-gradient(-45deg, #ffa733, #ffa733 10px, #fff 10px, #fff 20px);
+                }
+            }
+            .step__indicator--danger {
+                border: solid 1px #88392b;
+                background-color: #a13a28;
+
+                &.step__indicator--partial {
+                    background: repeating-linear-gradient(-45deg, #a13a28, #a13a28 10px, #fff 10px, #fff 20px);
+                }
+            }
+        }
+
+        &:focus {
+            border: solid 3px #254b6d;
+            margin: -3px;
+            outline: none;
+        }
+
+        &--active {
+            .typo-normal {
+                font-weight: 600;
+            }
+
+            &:hover {
+                .typo-normal {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &__text-icon-container {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__indicator {
+        display: block;
+        margin-bottom: -6px;
+        margin-top: 6px;
+        height: 8px;
+        border-radius: 3px;
+        border: solid 1px #78706a;
+        background-color: #e7e9e9;
+
+        &--active {
+            border: solid 1px #78706a;
+            background-color: #78706a;
+            &.step__indicator--success {
+                border: solid 1px #1c6937;
+                background-color: #1c6937;
+
+                &.step__indicator--partial {
+                    background: repeating-linear-gradient(-45deg, #1c6937, #1c6937 10px, #fff 10px, #fff 20px);
+                }
+            }
+            &.step__indicator--warning {
+                border: solid 1px #b26d14;
+                background-color: #ffa733;
+
+                &.step__indicator--partial {
+                    background: repeating-linear-gradient(-45deg, #ffa733, #ffa733 10px, #fff 10px, #fff 20px);
+                }
+            }
+            &.step__indicator--danger {
+                border: solid 1px #88392b;
+                background-color: #a13a28;
+
+                &.step__indicator--partial {
+                    background: repeating-linear-gradient(-45deg, #a13a28, #a13a28 10px, #fff 10px, #fff 20px);
+                }
+            }
+        }
+
+        &--success {
+            border: solid 1px #1c6937;
+            background-color: #9bd0b0;
+
+            &.step__indicator--partial {
+                background: repeating-linear-gradient(-45deg, #9bd0b0, #9bd0b0 10px, #fff 10px, #fff 20px);
+            }
+        }
+
+        &--warning {
+            border: solid 1px #b26d14;
+            background-color: #ffe5c2;
+
+            &.step__indicator--partial {
+                background: repeating-linear-gradient(-45deg, #ffe5c2, #ffe5c2 10px, #fff 10px, #fff 20px);
+            }
+        }
+
+        &--danger {
+            border: solid 1px #88392b;
+            background-color: #e3b0a8;
+
+            &.step__indicator--partial {
+                background: repeating-linear-gradient(-45deg, #e3b0a8, #e3b0a8 10px, #fff 10px, #fff 20px);
+            }
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        vertical-align: sub;
+        display: inline;
+        margin-right: 8px;
+
+        @media screen and (max-width: 1024px) {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &--partial {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+
+            @media screen and (max-width: 1024px) {
+                display: block;
+                margin: 0 auto;
+            }
+
+            &.step__icon--success {
+                background: linear-gradient(-45deg, #1c6937, #1c6937 49%, #1c6937 49%, #1c6937 51%, white 51%);
+                border: 1px solid #1c6937;
+            }
+
+            &.step__icon--warning {
+                background: linear-gradient(-45deg, #ffa733, #ffa733 49%, #ffa733 49%, #ffa733 51%, white 51%);
+                border: 1px solid #ffa733;
+            }
+
+            &.step__icon--danger {
+                background: linear-gradient(-45deg, #a13a28, #a13a28 49%, #a13a28 49%, #a13a28 51%, white 51%);
+                border: 1px solid #a13a28;
+            }
+        }
+    }
+
+    &__icon-placeholder {
+        @media screen and (max-width: 1024px) {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__arrow-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.step__button[data-tooltip]:before {
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    content: attr(data-tooltip);
+    opacity: 0;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #3e3832;
+    background-color: #fff2e0;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 #b7b1a9;
+    padding: 2px 8px;
+    margin: 0 -20px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.step__button[data-tooltip]:hover:before {
+    animation-name: showTooltip;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes showTooltip {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
