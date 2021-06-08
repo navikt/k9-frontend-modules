@@ -1,6 +1,9 @@
 /** Vanlige react-komponenter **/
-export { default as BoxedListWithLinks } from './src/boxed-list-with-links';
+export { default as BoxedList } from './src/boxed-list';
+export { default as BoxedListWithLinks } from './src/boxed-list-with-links/BoxedListWithLinks';
+export { default as BoxedListWithSelection } from './src/boxed-list-with-selection/BoxedListWithSelection';
 export { default as ContentWithTooltip } from './src/content-with-tooltip/ContentWithTooltip';
+export { default as Clipboard } from './src/clipboard/Clipboard';
 export { default as DetailView, DetailViewProps } from './src/detail-view/DetailView';
 export { default as IndicatorWithOverlay } from './src/indicator-with-overlay/IndicatorWithOverlay';
 export { default as InteractiveList } from './src/interactive-list/InteractiveList';

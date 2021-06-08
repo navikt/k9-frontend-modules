@@ -1,5 +1,4 @@
 import * as React from 'react';
-// eslint-disable-next-line import/no-unresolved
 import { Systemerknapp } from 'nav-frontend-ikonknapper';
 import bem from '@navikt/nap-bem-utils';
 import './systemButtonStyles';
