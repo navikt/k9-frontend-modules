@@ -4,13 +4,7 @@ import { Normaltekst } from 'nav-frontend-typografi';
 import * as React from 'react';
 import StepIcon from './StepIcon';
 import './stepStyles.less';
-
-export enum StepType {
-    warning = 'warning',
-    success = 'success',
-    danger = 'danger',
-    default = 'default',
-}
+import { StepType } from './StepType';
 
 export interface StepProps {
     label: string;

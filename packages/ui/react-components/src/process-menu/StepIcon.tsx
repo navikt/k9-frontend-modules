@@ -1,7 +1,7 @@
 import bem from '@navikt/k9-bem-utils';
 import * as React from 'react';
 import classnames from 'classnames';
-import { StepType } from './Step';
+import { StepType } from './StepType';
 import './stepStyles.less';
 
 /* eslint-disable global-require */
