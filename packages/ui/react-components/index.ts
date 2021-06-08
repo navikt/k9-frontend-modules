@@ -19,7 +19,15 @@ export { default as LabelledContent } from './src/labelled-content/LabelledConte
 export { default as LinkButton } from './src/link-button/LinkButton';
 export { default as TitleWithUnderline } from './src/title-with-underline/TitleWithUnderline';
 export { default as ExpandableLabel } from './src/expandable-label/ExpandableLabel';
+export { default as ExpandablePanel } from './src/expandable-panel/ExpandablePanel';
 export { default as FieldError } from './src/field-error/FieldError';
+export { default as Header } from './src/header';
+export { default as Popover } from './src/popover/popover';
+export { default as ProcessMenu } from './src/process-menu';
+export { default as StatefulProcessMenu } from './src/process-menu/StatefulProcessMenu';
+export { default as Step } from './src/process-menu/Step';
+export { default as SideMenu } from './src/side-menu';
+export { default as StatefulSideMenu } from './src/side-menu/StatefulSideMenu';
 
 /** react-hook-form-komponenter **/
 export { default as CheckboxGroup } from './src/form/wrappers/CheckboxGroup';

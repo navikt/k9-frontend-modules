@@ -1,7 +1,7 @@
-import bem from '@navikt/nap-bem-utils';
+import bem from '@navikt/k9-bem-utils';
 import * as React from 'react';
-import './indexStyles';
 import Step, { StepProps } from './Step';
+import './indexStyles.less';
 
 interface ProcessMenuProps {
     steps: StepProps[];

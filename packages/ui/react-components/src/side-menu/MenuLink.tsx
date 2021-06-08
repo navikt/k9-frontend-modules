@@ -1,4 +1,4 @@
-import bem from '@navikt/nap-bem-utils';
+import bem from '@navikt/k9-bem-utils';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import * as React from 'react';

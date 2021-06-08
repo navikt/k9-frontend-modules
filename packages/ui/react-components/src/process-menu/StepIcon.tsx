@@ -1,8 +1,8 @@
-import bem from '@navikt/nap-bem-utils';
+import bem from '@navikt/k9-bem-utils';
 import * as React from 'react';
 import classnames from 'classnames';
 import { StepType } from './Step';
-import './stepStyles';
+import './stepStyles.less';
 
 /* eslint-disable global-require */
 const advarselImgPath = require('./assets/images/advarsel.svg') as string;
