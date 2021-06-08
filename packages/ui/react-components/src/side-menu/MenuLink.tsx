@@ -2,7 +2,7 @@ import bem from '@navikt/k9-bem-utils';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import * as React from 'react';
-import './MenuLinkStyles';
+import './MenuLinkStyles.less';
 
 interface MenuLinkProps {
     label: string;

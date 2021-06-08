@@ -1,9 +1,9 @@
 import bem from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
 import * as React from 'react';
-import './indexStyles';
 import classnames from 'classnames';
 import MenuLink from './MenuLink';
+import './indexStyles.less';
 
 const sideMenuCls = bem('side-menu');
 

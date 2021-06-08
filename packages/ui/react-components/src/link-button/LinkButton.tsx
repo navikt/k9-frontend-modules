@@ -1,7 +1,7 @@
 import React from 'react';
 import './linkButton.less';
 
-interface LinkButtonProps {
+export interface LinkButtonProps {
     onClick: () => void;
     children: React.ReactNode;
     className?: string;

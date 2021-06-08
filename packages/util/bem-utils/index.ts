@@ -1,1 +1,1 @@
-export { default as bemUtils } from './src/bemUtils';
+export { default as default } from './src/bemUtils';

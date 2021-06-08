@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StepType } from './Step';
+import { StepType } from './StepType';
 import ProcessMenu from './index';
 
 interface StepProps {
