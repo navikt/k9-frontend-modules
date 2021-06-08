@@ -1,6 +1,6 @@
 import * as React from 'react';
 import bemUtils from '@navikt/k9-bem-utils';
-import './menuStyles';
+import './menuStyles.less';
 import AnnetIcon from './images/annet';
 
 const menuCls = bemUtils('menu');
