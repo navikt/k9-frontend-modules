@@ -28,6 +28,8 @@ export { default as StatefulProcessMenu } from './src/process-menu/StatefulProce
 export { default as Step } from './src/process-menu/Step';
 export { default as SideMenu } from './src/side-menu';
 export { default as StatefulSideMenu } from './src/side-menu/StatefulSideMenu';
+export { default as PersonCard, Gender } from './src/person-card/PersonCard';
+export { default as EmptyPersonCard } from './src/person-card/EmptyPersonCard';
 
 /** react-hook-form-komponenter **/
 export { default as CheckboxGroup } from './src/form/wrappers/CheckboxGroup';

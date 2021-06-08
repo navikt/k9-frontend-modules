@@ -1,8 +1,8 @@
-import bem from '@navikt/nap-bem-utils';
-import Clipboard from '@navikt/nap-clipboard';
-import Popover from '@navikt/nap-popover';
+import { bemUtils } from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
 import * as React from 'react';
+import Clipboard from '../clipboard/Clipboard';
+import Popover from '../popover/popover';
 import Card from './Card';
 import GenderIcon from './GenderIcon';
 import Menu from './Menu';
@@ -27,7 +27,7 @@ export interface PersonCardData {
     childAge?: string | React.ReactNode;
 }
 
-const personCardCls = bem('person-card');
+const personCardCls = bemUtils('person-card');
 
 const PersonCard = ({
     name,
@@ -42,7 +42,7 @@ const PersonCard = ({
 }: PersonCardData): JSX.Element => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const menuRef = React.useRef(null);
-    const handleClickOutside = event => {
+    const handleClickOutside = (event) => {
         if (menuRef.current && !menuRef.current.contains(event.target)) {
             setIsMenuOpen(false);
         }
@@ -104,7 +104,7 @@ const PersonCard = ({
                             <Normaltekst>{fodselsnummer}</Normaltekst>
                         </Clipboard>
 
-                        {renderMenuContent && (
+                        {!!renderMenuContent && (
                             <div ref={menuRef}>
                                 <Popover
                                     popperIsVisible={isMenuOpen}

@@ -1,10 +1,9 @@
 import * as React from 'react';
+import { bemUtils } from '@navikt/k9-bem-utils';
 import './menuStyles';
-import bem from '@navikt/nap-bem-utils';
+import AnnetIcon from './images/annet';
 
-const menuImgPath = require('./assets/images/annet.svg') as string;
-
-const menuCls = bem('menu');
+const menuCls = bemUtils('menu');
 
 interface MenuProps {
     onClick: () => void;
@@ -21,7 +20,7 @@ const Menu = ({ onClick, isOpen }: MenuProps): JSX.Element => {
             aria-expanded={isOpen}
             aria-label="Meny"
         >
-            <img src={menuImgPath} alt="" className={menuCls.element('icon')} />
+            <AnnetIcon />
         </button>
     );
 };

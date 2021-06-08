@@ -1,5 +1,5 @@
 import React from 'react';
-import bem from '@navikt/k9-bem-utils';
+import { bemUtils } from '@navikt/k9-bem-utils';
 import ClipboardIcon from './ClipboardIcon';
 import copyContentsToClipboard from './util';
 import './clipboardStyles.less';
@@ -9,7 +9,7 @@ interface ClipboardProps {
     buttonLabel?: string;
 }
 
-const clipboardCls = bem('clipboard');
+const clipboardCls = bemUtils('clipboard');
 
 const Clipboard = ({ children, buttonLabel = 'Kopier' }: ClipboardProps): JSX.Element => {
     const [didCopy, setDidCopy] = React.useState(false);
