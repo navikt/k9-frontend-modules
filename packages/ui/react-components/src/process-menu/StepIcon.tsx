@@ -1,7 +1,7 @@
 import bem from '@navikt/k9-bem-utils';
 import * as React from 'react';
 import classnames from 'classnames';
-import { StepType } from './StepType';
+import StepType from './StepType';
 import CheckIcon from './icons/CheckIcon';
 import WarningIcon from './icons/WarningIcon';
 import AvslåttValgIcon from './icons/AvslåttIcon';

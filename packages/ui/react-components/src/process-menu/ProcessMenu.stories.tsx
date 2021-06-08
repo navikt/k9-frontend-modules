@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ProcessMenu from './ProcessMenu';
 import StatefulProcessMenu from './StatefulProcessMenu';
-import { StepType } from './StepType';
+import StepType from './StepType';
 
 export default { title: 'Process menu' };
 
