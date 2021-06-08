@@ -3,7 +3,7 @@ import { Story } from '@storybook/react';
 import PersonCardComponent, { Gender } from './PersonCard';
 
 export default {
-    title: 'Person card',
+    title: 'React Components',
     component: PersonCardComponent,
 };
 

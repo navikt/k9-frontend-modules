@@ -3,12 +3,9 @@ import * as React from 'react';
 import classnames from 'classnames';
 import { StepType } from './StepType';
 import './stepStyles.less';
-
-/* eslint-disable global-require */
-const advarselImgPath = require('./assets/images/advarsel.svg') as string;
-const avslaatImgPath = require('./assets/images/avslaatt_valgt.svg') as string;
-const checkImgPath = require('./assets/images/check.svg') as string;
-/* eslint-enable global-require */
+import CheckIcon from './assets/images/check';
+import AdvarselIcon from './assets/images/advarsel';
+import AvslåttValgIcon from './assets/images/avslaatt_valgt';
 
 interface StepIconProps {
     type: string;
@@ -35,31 +32,13 @@ const StepIcon = ({ type, isFinished, iconAltText, usePartialStatus }: StepIconP
         );
     }
     if (isFinished) {
-        return (
-            <img
-                src={checkImgPath}
-                alt={iconAltText || 'Behandlet - Oppgave løst/godkjent'}
-                className={stepCls.elementWithModifier('icon', 'success')}
-            />
-        );
+        return <CheckIcon className={stepCls.elementWithModifier('icon', 'success')} />;
     }
     if (isWarning) {
-        return (
-            <img
-                src={advarselImgPath}
-                alt={iconAltText || 'Behandlet - Manuell oppgave'}
-                className={stepCls.elementWithModifier('icon', 'warning')}
-            />
-        );
+        return <AdvarselIcon className={stepCls.elementWithModifier('icon', 'warning')} />;
     }
     if (isDanger) {
-        return (
-            <img
-                src={avslaatImgPath}
-                alt={iconAltText || 'Oppgave løst/avslått'}
-                className={stepCls.elementWithModifier('icon', 'danger')}
-            />
-        );
+        return <AvslåttValgIcon className={stepCls.elementWithModifier('icon', 'danger')} />;
     }
     return <span className={stepCls.element('icon-placeholder')} />;
 };
