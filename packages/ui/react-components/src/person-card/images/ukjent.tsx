@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 const UkjentIcon = () => (
-    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165.4 162.59">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165.4 162.59">
         <defs></defs>
         <title>Ukjent kjønn</title>
         <path
