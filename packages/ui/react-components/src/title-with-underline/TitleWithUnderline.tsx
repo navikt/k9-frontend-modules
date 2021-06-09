@@ -2,7 +2,7 @@ import React from 'react';
 import { Undertittel as TitleComponent } from 'nav-frontend-typografi';
 import './titleWithUnderline.less';
 
-interface TitleWithUnderlineProps {
+export interface TitleWithUnderlineProps {
     children: React.ReactNode;
     titleClass?: string;
     contentAfterTitleRenderer?: () => React.ReactNode;

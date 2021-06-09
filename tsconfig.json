@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "module": "esnext",
-    "lib": ["es2019"],
-    "target": "es2019",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "jsx": "react"
-  },
-  "include": ["./externals.d.ts"]
+    "compilerOptions": {
+        "declaration": true,
+        "module": "esnext",
+        "lib": ["es2019", "dom"],
+        "target": "es2019",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "jsx": "react"
+    },
+    "include": ["./externals.d.ts"]
 }

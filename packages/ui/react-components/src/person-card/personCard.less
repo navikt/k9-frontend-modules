@@ -1,0 +1,142 @@
+.personCard {
+    &__container {
+        padding: 0 0.625rem 0 1rem;
+        display: flex;
+        align-items: center;
+
+        .arrow {
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            z-index: 1;
+
+            &[data-popper-placement^='bottom']:before {
+                background-color: white;
+                border-left: 0.0625rem solid #b7b1a9;
+                border-top: 0.0625rem solid #b7b1a9;
+                content: '';
+                height: 1rem;
+                position: absolute;
+                top: -0.5rem;
+                transform: rotate(45deg);
+                width: 1rem;
+            }
+        }
+    }
+
+    &__name-gender-container {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        max-width: 250px;
+    }
+
+    &__name {
+        &.typo-normal {
+            font-weight: 400;
+            padding: 0 1.5px;
+            color: #0067c5;
+            line-height: 1.25rem;
+        }
+
+        &--active {
+            text-decoration: none;
+            &.typo-normal {
+                font-weight: 600;
+                color: black;
+                padding: 0;
+            }
+        }
+    }
+
+    &__namePlaceholder {
+        color: rgb(62, 56, 50);
+        padding: 0 1.5px;
+    }
+
+    &__gender-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        flex: 1 0 auto;
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+            flex: 1 0 auto;
+        }
+
+        &--unknown {
+            width: 1.625rem;
+            height: 1.625rem;
+            svg {
+                width: 1.625rem;
+                height: 1.625rem;
+            }
+        }
+    }
+
+    &__selector {
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 0;
+        text-decoration: underline;
+        color: #0067c5;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        @supports (-webkit-line-clamp: 2) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: initial;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        &[aria-current='true'] {
+            text-decoration: none;
+            pointer-events: none;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &--inactive {
+            color: rgb(62, 56, 50);
+            text-decoration: none;
+            cursor: auto;
+
+            .typo-normal {
+                color: rgb(62, 56, 50);
+            }
+        }
+    }
+
+    &__menu-container {
+        border: 1px solid rgb(183, 177, 169);
+        box-shadow: 0px 0.8px 4px 2px rgba(0, 0, 0, 0.08);
+        position: absolute;
+        background-color: white;
+        padding: 1rem;
+    }
+
+    &__menu-button-container {
+        margin-left: 0.5rem;
+    }
+
+    &__labelContainer {
+        margin-left: 14px;
+        margin-right: 5px;
+    }
+
+    &__child-age {
+        color: #3e3832;
+    }
+}

@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    z-index: 2;
+
+    &:first-of-type {
+        padding: 0 0 0 1rem;
+    }
+
+    &--active {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            border-bottom: 0.25rem solid #0067c5;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

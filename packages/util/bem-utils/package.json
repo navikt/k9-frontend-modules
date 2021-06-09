@@ -1,0 +1,30 @@
+{
+    "version": "1.0.1",
+    "name": "@navikt/k9-bem-utils",
+    "description": "A collection of bem utils",
+    "author": "NAV",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "index.ts",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf ./dist ./node_modules",
+        "test": "jest --passWithNoTests",
+        "test-watch": "jest --watch"
+    },
+    "bugs": {
+        "url": "https://github.com/navikt/not-a-platform/issues"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/navikt/k9-frontend-modules"
+    }
+}

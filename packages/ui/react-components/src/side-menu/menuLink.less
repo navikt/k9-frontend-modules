@@ -1,0 +1,103 @@
+.menuLink {
+    &__button {
+        background: none;
+        border: none;
+        position: relative;
+        color: #3e3832;
+        text-decoration: none;
+        text-align: left;
+        width: 100%;
+        padding: 0;
+        cursor: pointer;
+        border: 3px solid transparent;
+
+        &:hover {
+            background: #e7e9e9;
+        }
+
+        &:focus {
+            border: 3px solid #254b6d;
+            outline: none;
+        }
+
+        &--active {
+            background: #e7e9e9;
+            border: 3px solid #e7e9e9;
+            border-left: transparent;
+            padding-left: 0.1875rem;
+
+            &:before {
+                content: '';
+                position: absolute;
+                background: #0067c5;
+                height: calc(100% + 0.375rem);
+                width: 0.25rem;
+                left: 0;
+                top: -0.1875rem;
+                z-index: 1;
+            }
+
+            &:focus {
+                padding-left: 0;
+                &:before {
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &__label {
+        padding: 0 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #3e3832;
+        position: relative;
+        min-height: 1.625rem;
+
+        &--active {
+            font-weight: 600;
+            background: #e7e9e9;
+        }
+
+        &--with-icon {
+            padding-right: 0.8125rem;
+        }
+    }
+
+    &__icon {
+        margin-left: 1rem;
+    }
+
+    &--withArrows {
+        .menu-link__button {
+            &--active {
+                &:before {
+                    display: none;
+                }
+            }
+
+            &:focus {
+                .menu-link__arrow-right {
+                    right: 0;
+                    top: 0px;
+                    border-top: 13px solid transparent;
+                    border-bottom: 13px solid transparent;
+                }
+            }
+        }
+    }
+    &__arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-left: 17px solid #e7e9e9;
+        position: absolute;
+        right: -3px;
+        top: -3px;
+        background-color: white;
+    }
+}

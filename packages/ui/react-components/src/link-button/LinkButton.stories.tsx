@@ -8,9 +8,7 @@ export default {
 };
 
 const Template: Story<ComponentProps<typeof LinkButtonComponent>> = (args) => (
-    <LinkButtonComponent onClick={() => console.log('I was clicked')} href="#">
-        Click me
-    </LinkButtonComponent>
+    <LinkButtonComponent onClick={() => console.log('I was clicked')}>Click me</LinkButtonComponent>
 );
 
 export const LinkButton = Template.bind({});

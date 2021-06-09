@@ -26,9 +26,12 @@
         "nav-frontend-alertstriper": "^4.0.1",
         "nav-frontend-alertstriper-style": "^3.0.1",
         "nav-frontend-core": "^6.0.1",
+        "nav-frontend-chevron": "^1.0.30",
+        "nav-frontend-chevron-style": "^1.0.4",
         "nav-frontend-etiketter": "^3.0.1",
         "nav-frontend-etiketter-style": "^2.0.1",
         "nav-frontend-ikoner-assets": "^3.0.1",
+        "nav-frontend-ikonknapper": "^1.0.32",
         "nav-frontend-js-utils": "^1.0.19",
         "nav-frontend-knapper": "^3.0.1",
         "nav-frontend-knapper-style": "^2.0.1",
@@ -47,7 +50,8 @@
         "react-collapse": "^5.1.0",
         "react-day-picker": "^7.4.10",
         "react-dom": "^17.0.2",
-        "react-hook-form": "^6.15.5"
+        "react-hook-form": "^6.15.5",
+        "react-popper": "^2.2.5"
     },
     "peerDependencies": {
         "@navikt/fnrvalidator": "^1.1.4",
@@ -79,10 +83,12 @@
         "react-collapse": "^5.1.0",
         "react-day-picker": "^7.4.10",
         "react-dom": "^17.0.2",
-        "react-hook-form": "^6.15.5"
+        "react-hook-form": "^6.15.5",
+        "react-popper": "^2.2.5"
     },
     "dependencies": {
-        "@navikt/k9-period-utils": "^0.0.7"
+        "@navikt/k9-period-utils": "^0.0.7",
+        "@navikt/k9-bem-utils": "^1.0.1"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
