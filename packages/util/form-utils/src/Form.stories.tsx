@@ -1,14 +1,13 @@
 import { Story } from '@storybook/react';
 import React, { ComponentProps } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import Box, { Margin } from '../box/Box';
-import Form from './Form';
 import CheckboxGroup from './wrappers/CheckboxGroup';
 import Datepicker from './wrappers/Datepicker';
 import PeriodpickerList from './wrappers/PeriodpickerList';
 import RadioGroupPanel from './wrappers/RadioGroupPanel';
 import TextArea from './wrappers/TextArea';
 import YesOrNoQuestion from './wrappers/YesOrNoQuestion';
+import { Box, Margin, Form } from '@navikt/k9-react-components';
 
 export default {
     title: 'React Components',
