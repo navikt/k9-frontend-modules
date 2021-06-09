@@ -4,11 +4,11 @@
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
-        "storybook": "start-storybook -p 7001 --ci",
+        "storybook": "start-storybook -p 7003 --ci",
         "test": "jest --passWithNoTests"
     },
     "author": "NAV IT",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "MIT",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "files": [
