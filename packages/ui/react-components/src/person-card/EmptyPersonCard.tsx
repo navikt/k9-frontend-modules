@@ -4,7 +4,7 @@ import { Normaltekst } from 'nav-frontend-typografi';
 import Card from './Card';
 import GenderIcon from './GenderIcon';
 
-const personCardCls = bemUtils('person-card');
+const personCardCls = bemUtils('personCard');
 
 interface EmptyPersonCard {
     namePlaceholder: string;

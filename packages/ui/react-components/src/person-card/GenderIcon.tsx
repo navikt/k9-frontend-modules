@@ -6,7 +6,7 @@ import ManIcon from './icons/Man';
 import WomanIcon from './icons/Woman';
 import UnknownIcon from './icons/Unknown';
 
-const cardCls = bemUtils('person-card');
+const cardCls = bemUtils('personCard');
 
 interface GenderIconProps {
     gender?: GenderType;
