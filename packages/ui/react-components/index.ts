@@ -35,14 +35,6 @@ export { default as SystemButton } from './src/system-button/SystemButton';
 export { default as UserPanel } from './src/user-panel/UserPanel';
 export { default as Infostripe } from './src/infostripe/Infostripe';
 
-/** react-hook-form-komponenter **/
-export { default as CheckboxGroup } from './src/form/wrappers/CheckboxGroup';
-export { default as Datepicker } from './src/form/wrappers/Datepicker';
-export { default as PeriodpickerList } from './src/form/wrappers/PeriodpickerList';
-export { default as RadioGroupPanel } from './src/form/wrappers/RadioGroupPanel';
-export { default as TextArea } from './src/form/wrappers/TextArea';
-export { default as YesOrNoQuestion } from './src/form/wrappers/YesOrNoQuestion';
-
 /** Ikoner **/
 export { default as ArrowIcon } from './src/icons/ArrowIcon';
 export { default as BucketIcon } from './src/icons/BucketIcon';

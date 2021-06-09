@@ -1,8 +1,5 @@
 module.exports = {
-    stories: [
-        '../stories/**/*.stories.mdx',
-        '../stories/**/*.stories.@(js|jsx|ts|tsx)',
-    ],
+    stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
     refs: {
         'react-components': {
@@ -12,6 +9,10 @@ module.exports = {
         'web-components': {
             title: 'Web Components',
             url: 'http://localhost:7002',
+        },
+        'form-utils': {
+            title: 'Form utils',
+            url: 'http://localhost:7003',
         },
     },
     webpackFinal: async (config) => {

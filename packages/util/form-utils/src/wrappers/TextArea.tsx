@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Textarea } from 'nav-frontend-skjema';
 import { Controller, useFormContext } from 'react-hook-form';
-import ExpandableLabel from '../../expandable-label/ExpandableLabel';
-import Box, { Margin } from '../../box/Box';
+import { ExpandableLabel, Box, Margin } from '@navikt/k9-react-components';
 
 interface TextAreaProps {
     label?: React.ReactNode;
