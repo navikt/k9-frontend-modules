@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-react-components",
-    "version": "0.0.16",
+    "version": "0.0.17",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
@@ -54,9 +54,12 @@
         "nav-frontend-alertstriper": "^4.0.1",
         "nav-frontend-alertstriper-style": "^3.0.1",
         "nav-frontend-core": "^6.0.1",
+        "nav-frontend-chevron": "^1.0.30",
+        "nav-frontend-chevron-style": "^1.0.4",
         "nav-frontend-etiketter": "^3.0.1",
         "nav-frontend-etiketter-style": "^2.0.1",
         "nav-frontend-ikoner-assets": "^3.0.1",
+        "nav-frontend-ikonknapper": "^1.0.32",
         "nav-frontend-js-utils": "^1.0.19",
         "nav-frontend-knapper": "^3.0.1",
         "nav-frontend-knapper-style": "^2.0.1",
