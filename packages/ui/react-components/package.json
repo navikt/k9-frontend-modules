@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-react-components",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
@@ -73,6 +73,11 @@
         "react-collapse": "^5.1.0",
         "react-dom": "^17.0.2",
         "react-popper": "^2.2.5"
+    },
+    "peerDependenciesMeta": {
+        "react-popper": {
+            "optional": true
+        }
     },
     "dependencies": {
         "@navikt/k9-period-utils": "^0.0.7",
