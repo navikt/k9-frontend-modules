@@ -1,7 +1,14 @@
 import * as React from 'react';
 
-const OnePersonOutlineGray = () => (
-    <svg width="41" height="43" viewBox="0 0 41 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+const OnePersonOutlineGray = ({ classname }) => (
+    <svg
+        width="41"
+        height="43"
+        viewBox="0 0 41 43"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={classname}
+    >
         <path
             fillRule="evenodd"
             clipRule="evenodd"
