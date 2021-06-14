@@ -3,7 +3,7 @@ import React, { ComponentProps } from 'react';
 import Box, { Margin } from '../box/Box';
 import EmptyPersonCard from './EmptyPersonCard';
 import PersonCardComponent from './PersonCard';
-import AnnenPartCard from './AnnenPartCard';
+import OtherPartCard from './OtherPartCard';
 
 export default {
     title: 'React Components',
@@ -60,7 +60,7 @@ const Template: Story<ComponentProps<typeof PersonCardComponent>> = (args) => (
             <EmptyPersonCard namePlaceholder="Ukjent navn, mangler norsk id-nr" />
         </Box>
         <Box marginBottom={Margin.xLarge}>
-            <AnnenPartCard name="Per Parker" fodselsnummer="12345612345" url="#" />
+            <OtherPartCard name="Per Parker" fodselsnummer="12345612345" url="#" />
         </Box>
     </>
 );

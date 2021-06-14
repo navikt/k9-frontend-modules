@@ -7,13 +7,13 @@ import Lenke from 'nav-frontend-lenker';
 
 const personCardCls = bemUtils('personCard');
 
-interface AnnenPartCardProps {
+interface OtherPartCardProps {
     url: string;
     fodselsnummer: string;
     name: string;
 }
 
-const AnnenPartCard = ({ url, fodselsnummer, name }: AnnenPartCardProps) => (
+const OtherPartCard = ({ url, fodselsnummer, name }: OtherPartCardProps) => (
     <Card>
         <div className={personCardCls.element('name-gender-container')}>
             <OnePersonOutlineGray classname={personCardCls.element('other-part-icon')} />
@@ -32,4 +32,4 @@ const AnnenPartCard = ({ url, fodselsnummer, name }: AnnenPartCardProps) => (
     </Card>
 );
 
-export default AnnenPartCard;
+export default OtherPartCard;

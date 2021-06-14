@@ -60,7 +60,7 @@
     "dependencies": {
         "@navikt/k9-bem-utils": "^1.0.1",
         "@navikt/k9-period-utils": "^0.0.7",
-        "@navikt/k9-react-components": "^0.0.19"
+        "@navikt/k9-react-components": "^0.0.20"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
