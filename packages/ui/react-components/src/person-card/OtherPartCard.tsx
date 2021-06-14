@@ -15,7 +15,7 @@ interface OtherPartCardProps {
 
 const OtherPartCard = ({ url, fodselsnummer, name }: OtherPartCardProps) => (
     <Card>
-        <div className={personCardCls.element('name-gender-container')}>
+        <div className={personCardCls.elementWithModifier('name-gender-container', 'other-part')}>
             <OnePersonOutlineGray classname={personCardCls.element('other-part-icon')} />
             <Normaltekst className={personCardCls.element('other-part-description')}>Andre parter i saken:</Normaltekst>
 

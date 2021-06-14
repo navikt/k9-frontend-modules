@@ -14,7 +14,7 @@ const ManIcon = () => (
                 id="a"
             />
         </defs>
-        <g fill="none" fill-rule="evenodd">
+        <g fill="none" fillRule="evenodd">
             <use fill="#FFF" xlinkHref="#a" />
             <use fill="#3385D1" xlinkHref="#a" />
         </g>
