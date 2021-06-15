@@ -3,7 +3,6 @@ import React, { ComponentProps } from 'react';
 import Box, { Margin } from '../box/Box';
 import EmptyPersonCard from './EmptyPersonCard';
 import PersonCardComponent from './PersonCard';
-import OtherPartCard from './OtherPartCard';
 
 export default {
     title: 'React Components',
@@ -58,9 +57,6 @@ const Template: Story<ComponentProps<typeof PersonCardComponent>> = (args) => (
         </Box>
         <Box marginBottom={Margin.xLarge}>
             <EmptyPersonCard namePlaceholder="Ukjent navn, mangler norsk id-nr" />
-        </Box>
-        <Box marginBottom={Margin.xLarge}>
-            <OtherPartCard name="Per Parker" fodselsnummer="12345612345" url="#" />
         </Box>
     </>
 );

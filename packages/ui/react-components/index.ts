@@ -31,7 +31,6 @@ export { default as SideMenu } from './src/side-menu/SideMenu';
 export { default as StatefulSideMenu } from './src/side-menu/StatefulSideMenu';
 export { default as PersonCard, Gender } from './src/person-card/PersonCard';
 export { default as EmptyPersonCard } from './src/person-card/EmptyPersonCard';
-export { default as OtherPartCard } from './src/person-card/OtherPartCard';
 export { default as SystemButton } from './src/system-button/SystemButton';
 export { default as UserPanel } from './src/user-panel/UserPanel';
 export { default as Infostripe } from './src/infostripe/Infostripe';
