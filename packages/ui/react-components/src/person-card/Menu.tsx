@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import bemUtils from '@navikt/k9-bem-utils';
 import OtherIcon from './icons/Other';
 import './menu.less';

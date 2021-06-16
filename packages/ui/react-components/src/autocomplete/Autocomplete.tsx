@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Suggestion } from './types/Suggestion';
 import AutocompleteSuggestion from './AutocompleteSuggestion';
 import './autocomplete.less';

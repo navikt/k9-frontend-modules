@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Textarea } from 'nav-frontend-skjema';
 import { Controller, useFormContext } from 'react-hook-form';
 import { ExpandableLabel, Box, Margin } from '@navikt/k9-react-components';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import bemUtils from '@navikt/k9-bem-utils';
 import { GenderType } from './PersonCard';
 import ChildIcon from './icons/Child';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import StepType from './StepType';
 import ProcessMenu from './ProcessMenu';
 

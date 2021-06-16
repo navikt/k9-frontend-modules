@@ -1,6 +1,6 @@
 import bem from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
-import * as React from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import MenuLink from './MenuLink';
 import './sideMenu.less';

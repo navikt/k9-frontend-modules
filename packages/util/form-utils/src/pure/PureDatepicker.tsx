@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Datepicker } from 'nav-datovelger';
 import { CalendarPlacement } from 'nav-datovelger/lib/types';
 import { DatepickerProps } from 'nav-datovelger/lib/Datepicker';

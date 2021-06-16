@@ -1,5 +1,5 @@
 import Spinner from 'nav-frontend-spinner';
-import * as React from 'react';
+import React from 'react';
 import PageError from '../page-error/PageError';
 
 interface PageContainerProps {

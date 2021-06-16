@@ -1,6 +1,6 @@
 import bemUtils from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
-import * as React from 'react';
+import React from 'react';
 import Clipboard from '../clipboard/Clipboard';
 import Popover from '../popover/Popover';
 import Card from './Card';

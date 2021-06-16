@@ -1,5 +1,5 @@
 import Icon from '../icon/Icon';
-import * as React from 'react';
+import React from 'react';
 
 const OnePersonIcon = () => (
     <Icon size={24}>

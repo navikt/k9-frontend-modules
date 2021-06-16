@@ -1,5 +1,5 @@
 import bem from '@navikt/k9-bem-utils';
-import * as React from 'react';
+import React from 'react';
 import { Systemerknapp } from 'nav-frontend-ikonknapper';
 import './systemButton.less';
 
