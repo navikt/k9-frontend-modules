@@ -1,6 +1,10 @@
 import React from 'react';
 
-const OnePersonOutlineGray = ({ classname }) => (
+interface OnePersonOutlineGrayProps {
+    classname?: string;
+}
+
+const OnePersonOutlineGray = ({ classname }: OnePersonOutlineGrayProps) => (
     <svg
         width="41"
         height="43"
