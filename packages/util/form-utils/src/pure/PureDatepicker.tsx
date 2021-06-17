@@ -14,6 +14,7 @@ interface CustomDatepickerProps {
     calendarSettings?: {
         position?: CalendarPlacement;
     };
+    disabled?: boolean;
 }
 
 const PureDatepicker = ({
@@ -25,6 +26,7 @@ const PureDatepicker = ({
     ariaLabel,
     inputId,
     calendarSettings,
+    disabled,
 }: DatepickerProps & CustomDatepickerProps): JSX.Element => {
     const dayPickerProps = limitations?.minDate ? { initialMonth: new Date(limitations.minDate) } : undefined;
 
@@ -42,6 +44,7 @@ const PureDatepicker = ({
                 dayPickerProps={dayPickerProps}
                 calendarSettings={calendarSettings}
                 inputId={inputId}
+                disabled={disabled}
             />
             {errorMessage && <FieldError message={errorMessage} />}
         </div>

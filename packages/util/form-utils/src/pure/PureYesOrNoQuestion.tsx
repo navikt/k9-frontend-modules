@@ -7,6 +7,7 @@ interface YesOrNoQuestionProps {
     onChange: (value) => void;
     name: string;
     errorMessage?: string;
+    disabled?: boolean;
 }
 
 enum YesOrNo {
@@ -29,7 +30,7 @@ const radios = [
     { label: 'Nei', value: YesOrNo.NO },
 ];
 
-const PureYesOrNoQuestion = ({ question, value, onChange, name, errorMessage }: YesOrNoQuestionProps) => (
+const PureYesOrNoQuestion = ({ question, value, onChange, name, errorMessage, disabled }: YesOrNoQuestionProps) => (
     <RadioGruppe legend={question} feil={errorMessage}>
         {radios.map((radio) => (
             <Radio
@@ -41,6 +42,7 @@ const PureYesOrNoQuestion = ({ question, value, onChange, name, errorMessage }: 
                     onChange(radio.value === YesOrNo.YES);
                 }}
                 checked={resolveYesOrNoLiteral(value) === radio.value}
+                disabled={disabled}
             />
         ))}
     </RadioGruppe>

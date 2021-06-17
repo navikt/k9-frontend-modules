@@ -7,9 +7,10 @@ interface CheckboxGroupProps {
     name: string;
     checkboxes: CheckboxProps[];
     validators?: { [key: string]: (v: any) => string | boolean | undefined };
+    disabled?: boolean;
 }
 
-const CheckboxGroup = ({ question, checkboxes, name, validators }: CheckboxGroupProps) => {
+const CheckboxGroup = ({ question, checkboxes, name, validators, disabled }: CheckboxGroupProps) => {
     const { control, errors } = useFormContext();
     return (
         <Controller
@@ -39,6 +40,7 @@ const CheckboxGroup = ({ question, checkboxes, name, validators }: CheckboxGroup
                                 }}
                                 checked={value.indexOf(checkboxProps.value) >= 0}
                                 key={'' + checkboxProps.value}
+                                disabled={disabled}
                             />
                         ))}
                     </CheckboxGruppe>

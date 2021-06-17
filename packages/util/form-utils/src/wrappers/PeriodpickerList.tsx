@@ -26,6 +26,7 @@ interface PeriodpickerListProps {
     renderBeforeFieldArray?: (fieldArrayMethods) => void;
     renderAfterFieldArray?: (fieldArrayMethods) => void;
     afterOnChange?: () => void;
+    disabled?: boolean;
 }
 const PeriodpickerList = ({
     name,
@@ -38,6 +39,7 @@ const PeriodpickerList = ({
     renderAfterFieldArray,
     renderContentAfterElement,
     afterOnChange,
+    disabled,
 }: PeriodpickerListProps): JSX.Element => {
     const formMethods = useFormContext();
     const { control, errors } = formMethods;
@@ -74,6 +76,7 @@ const PeriodpickerList = ({
                                                         if (afterOnChange) afterOnChange();
                                                     }}
                                                     inputId={`${name}[${index}].fom`}
+                                                    disabled={disabled}
                                                 />
                                                 <div style={{ display: 'flex', marginLeft: '1rem' }}>
                                                     <PureDatepicker
@@ -86,6 +89,7 @@ const PeriodpickerList = ({
                                                             if (afterOnChange) afterOnChange();
                                                         }}
                                                         inputId={`${name}[${index}].tom`}
+                                                        disabled={disabled}
                                                     />
                                                 </div>
                                             </>
