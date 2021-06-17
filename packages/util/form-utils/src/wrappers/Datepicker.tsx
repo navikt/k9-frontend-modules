@@ -12,6 +12,7 @@ export interface DatepickerProps {
     limitations?: DatepickerLimitations;
     error?: string;
     inputId?: string;
+    disabled?: boolean;
 }
 
 const Datepicker = ({
@@ -23,6 +24,7 @@ const Datepicker = ({
     defaultValue,
     error,
     inputId,
+    disabled,
 }: DatepickerProps): JSX.Element => {
     const { control, errors } = useFormContext();
 
@@ -45,6 +47,7 @@ const Datepicker = ({
                     limitations={limitations}
                     ariaLabel={ariaLabel}
                     inputId={inputId}
+                    disabled={disabled}
                 />
             )}
         />

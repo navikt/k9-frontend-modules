@@ -13,9 +13,10 @@ interface RadioGroupPanelProps {
     radios: RadioProps[];
     validators?: { [key: string]: (v: any) => string | boolean | undefined };
     onChange?: (value) => void;
+    disabled?: boolean;
 }
 
-const RadioGroupPanel = ({ question, name, validators, radios, onChange }: RadioGroupPanelProps) => {
+const RadioGroupPanel = ({ question, name, validators, radios, onChange, disabled }: RadioGroupPanelProps) => {
     const { control, errors } = useFormContext();
     const customOnChange = onChange;
     return (
@@ -45,6 +46,7 @@ const RadioGroupPanel = ({ question, name, validators, radios, onChange }: Radio
                                     reactHookFormOnChange(radio.value);
                                 }}
                                 checked={radio.value === props.value}
+                                disabled={disabled}
                             />
                         ))}
                     </RadioGruppe>
