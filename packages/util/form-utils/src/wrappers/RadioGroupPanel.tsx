@@ -4,11 +4,11 @@ import { Controller, useFormContext } from 'react-hook-form';
 
 interface RadioProps {
     value: string;
-    label: string;
+    label: React.ReactNode;
 }
 
 interface RadioGroupPanelProps {
-    question: string;
+    question: React.ReactNode;
     name: string;
     radios: RadioProps[];
     validators?: { [key: string]: (v: any) => string | boolean | undefined };
