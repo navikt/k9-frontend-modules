@@ -7,13 +7,13 @@ const getHumanReadablePeriodString = (periods: Period[]): string => {
 
     let periodString = '';
     periods.forEach((period, index) => {
-        const prettyPeriod = period.prettifyPeriod();
+        const prettifiedPeriod = period.prettifyPeriod();
         if (index === 0) {
-            periodString = prettyPeriod;
+            periodString = prettifiedPeriod;
         } else if (index === periods.length - 1) {
-            periodString = `${periodString} og ${prettyPeriod}`;
+            periodString = `${periodString} og ${prettifiedPeriod}`;
         } else {
-            periodString = `${periodString}, ${prettyPeriod}`;
+            periodString = `${periodString}, ${prettifiedPeriod}`;
         }
     });
 

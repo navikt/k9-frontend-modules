@@ -8,6 +8,7 @@ class Period {
 
     constructor(fom: string, tom: string) {
         this.fom = fom;
+
         this.tom = tom;
     }
 
