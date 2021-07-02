@@ -63,3 +63,4 @@ export { default as TwoPersonsIcon } from './src/icons/TwoPersonsIcon';
 export { default as TwoPersonsWithOneHighlightedIconBlue } from './src/icons/TwoPersonsWithOneHighlightedIconBlue';
 export { default as TwoPersonsWithOneHighlightedIconGray } from './src/icons/TwoPersonsWithOneHighlightedIconGray';
 export { default as WarningIcon } from './src/icons/WarningIcon';
+export { default as DuplicateDocumentsIcon } from './src/icons/DuplicateDocumentsIcon';
