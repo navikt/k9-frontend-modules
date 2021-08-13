@@ -81,6 +81,11 @@ const PeriodpickerList = ({
                                                 <div style={{ display: 'flex', marginLeft: '1rem' }}>
                                                     <PureDatepicker
                                                         {...toDatepickerProps}
+                                                        limitations={{
+                                                            minDate:
+                                                                toDatepickerProps?.limitations?.minDate || value?.fom,
+                                                            ...toDatepickerProps?.limitations,
+                                                        }}
                                                         label={toDatepickerProps.label}
                                                         ariaLabel={toDatepickerProps.ariaLabel}
                                                         value={value?.tom || ''}
