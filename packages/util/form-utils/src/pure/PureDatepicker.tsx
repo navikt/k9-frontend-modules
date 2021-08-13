@@ -15,6 +15,7 @@ interface CustomDatepickerProps {
         position?: CalendarPlacement;
     };
     disabled?: boolean;
+    initialMonth?: Date;
 }
 
 const PureDatepicker = ({
@@ -27,8 +28,9 @@ const PureDatepicker = ({
     inputId,
     calendarSettings,
     disabled,
+    initialMonth,
 }: DatepickerProps & CustomDatepickerProps): JSX.Element => {
-    const dayPickerProps = limitations?.minDate ? { initialMonth: new Date(limitations.minDate) } : undefined;
+    const dayPickerProps = { initialMonth: initialMonth ? new Date(initialMonth) : undefined };
 
     return (
         <div className="datepicker">
