@@ -81,6 +81,7 @@ const PeriodpickerList = ({
                                                 <div style={{ display: 'flex', marginLeft: '1rem' }}>
                                                     <PureDatepicker
                                                         {...toDatepickerProps}
+                                                        initialMonth={value?.fom}
                                                         label={toDatepickerProps.label}
                                                         ariaLabel={toDatepickerProps.ariaLabel}
                                                         value={value?.tom || ''}
