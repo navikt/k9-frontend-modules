@@ -33,6 +33,6 @@ export async function post<T>(
         if (httpErrorShouldBeHandledExternally(error)) {
             handleErrorExternally(error, httpErrorHandler);
         }
-        throw new Error(error);
+        throw error;
     }
 }
