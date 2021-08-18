@@ -68,7 +68,7 @@ describe('httpUtils', () => {
         it('should throw an error and console.error when the promise is rejected', async () => {
             axiosMock.post.mockImplementation(() => Promise.reject(badRequestResponseMock));
             const error = post('', null, null);
-            await expect(error).rejects.toThrow();
+            await expect(error).rejects.toEqual(badRequestResponseMock);
             expect(console.error).toHaveBeenCalledWith(badRequestResponseMock);
         });
 
@@ -80,7 +80,7 @@ describe('httpUtils', () => {
             axiosMock.post.mockImplementation(() => Promise.reject(badRequestResponseMock));
 
             const error = post('', null, mockedErrorHandler);
-            await expect(error).rejects.toThrow('');
+            await expect(error).rejects.toEqual(badRequestResponseMock);
             expect(httpErrorHandlerCaller).toHaveBeenCalledWith(badRequestResponseMock, mockedErrorHandler);
             httpErrorHandlerCaller.mockReset();
         });
@@ -92,7 +92,7 @@ describe('httpUtils', () => {
 
             axiosMock.post.mockImplementation(() => Promise.reject(badRequestResponseMock));
 
-            await expect(post('', null, mockedErrorHandler)).rejects.toThrow('');
+            await expect(post('', null, mockedErrorHandler)).rejects.toEqual(badRequestResponseMock);
             expect(httpErrorHandlerCaller).not.toHaveBeenCalled();
             httpErrorHandlerCaller.mockReset();
         });
