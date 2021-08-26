@@ -7,11 +7,11 @@ interface BaseInfostripeProps {
 
 interface ElementInfostripeProps extends BaseInfostripeProps {
     element: JSX.Element;
-    text?: string;
+    text?: never;
 }
 interface TextInfostripeProps extends BaseInfostripeProps {
     text: string;
-    element?: JSX.Element;
+    element?: never;
 }
 type InfostripeProps = ElementInfostripeProps | TextInfostripeProps;
 const Infostripe = ({ text, iconRenderer, element }: InfostripeProps) => (
