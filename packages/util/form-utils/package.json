@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-form-utils",
-    "version": "0.0.8",
+    "version": "1.0.0",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
