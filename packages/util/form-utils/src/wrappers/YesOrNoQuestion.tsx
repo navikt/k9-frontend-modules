@@ -10,7 +10,8 @@ interface YesOrNoQuestionProps {
 }
 
 const YesOrNoQuestion = ({ question, name, validators, disabled }: YesOrNoQuestionProps) => {
-    const { control, errors } = useFormContext();
+    const { control, formState } = useFormContext();
+    const { errors } = formState;
     return (
         <Controller
             control={control}
@@ -21,7 +22,8 @@ const YesOrNoQuestion = ({ question, name, validators, disabled }: YesOrNoQuesti
                     ...validators,
                 },
             }}
-            render={({ value, onChange }) => {
+            render={({ field }) => {
+                const { value, onChange } = field;
                 return (
                     <PureYesOrNoQuestion
                         question={question}
