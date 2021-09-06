@@ -17,7 +17,8 @@ interface RadioGroupPanelProps {
 }
 
 const RadioGroupPanel = ({ question, name, validators, radios, onChange, disabled }: RadioGroupPanelProps) => {
-    const { control, errors } = useFormContext();
+    const { control, formState } = useFormContext();
+    const { errors } = formState;
     const customOnChange = onChange;
     return (
         <Controller
@@ -30,7 +31,7 @@ const RadioGroupPanel = ({ question, name, validators, radios, onChange, disable
                 },
             }}
             render={(props) => {
-                const reactHookFormOnChange = props.onChange;
+                const reactHookFormOnChange = props.field.onChange;
                 return (
                     <RadioGruppe legend={question} feil={errors[name]?.message}>
                         {radios.map((radio) => (
@@ -45,7 +46,7 @@ const RadioGroupPanel = ({ question, name, validators, radios, onChange, disable
                                     }
                                     reactHookFormOnChange(radio.value);
                                 }}
-                                checked={radio.value === props.value}
+                                checked={radio.value === props.field.value}
                                 disabled={disabled}
                             />
                         ))}

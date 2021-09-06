@@ -42,7 +42,8 @@ const PeriodpickerList = ({
     disabled,
 }: PeriodpickerListProps): JSX.Element => {
     const formMethods = useFormContext();
-    const { control, errors } = formMethods;
+    const { control, formState } = formMethods;
+    const { errors } = formState;
     const fieldArrayMethods = useFieldArray({
         control,
         name,
@@ -63,7 +64,8 @@ const PeriodpickerList = ({
                                     name={`${name}[${index}].period`}
                                     rules={{ validate: { ...(validators || {}) } }}
                                     defaultValue={hasDefaultValue ? defaultValues[index] : new Period('', '')}
-                                    render={({ value, onChange }) => {
+                                    render={({ field }) => {
+                                        const { value, onChange } = field;
                                         return (
                                             <>
                                                 <PureDatepicker

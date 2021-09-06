@@ -11,7 +11,8 @@ interface CheckboxGroupProps {
 }
 
 const CheckboxGroup = ({ question, checkboxes, name, validators, disabled }: CheckboxGroupProps) => {
-    const { control, errors } = useFormContext();
+    const { control, formState } = useFormContext();
+    const { errors } = formState;
     return (
         <Controller
             control={control}
@@ -22,7 +23,8 @@ const CheckboxGroup = ({ question, checkboxes, name, validators, disabled }: Che
                     ...validators,
                 },
             }}
-            render={({ name, value, onChange }) => {
+            render={({ field }) => {
+                const { name, value, onChange } = field;
                 return (
                     <CheckboxGruppe legend={question} feil={errors[name]?.message}>
                         {checkboxes.map((checkboxProps) => (

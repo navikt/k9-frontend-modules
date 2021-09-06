@@ -14,7 +14,8 @@ interface TextAreaProps {
 }
 
 const TextArea = ({ label, name, validators, helptext, textareaClass, id, disabled }: TextAreaProps): JSX.Element => {
-    const { control, errors } = useFormContext();
+    const { control, formState } = useFormContext();
+    const { errors } = formState;
 
     return (
         <Controller
@@ -26,14 +27,17 @@ const TextArea = ({ label, name, validators, helptext, textareaClass, id, disabl
                     ...validators,
                 },
             }}
-            render={({ onChange, value }) => {
+            render={({ field }) => {
+                const { value, onChange } = field;
+                const textAreaValue = value?.length === 0 ? '' : value;
+
                 if (helptext) {
                     return (
                         <>
                             <ExpandableLabel labelText={label} helptext={helptext} labelFor={name} />
                             <Box marginTop={Margin.medium}>
                                 <Textarea
-                                    value={value}
+                                    value={textAreaValue}
                                     maxLength={0}
                                     feil={errors[name]?.message}
                                     name={name}
@@ -49,7 +53,7 @@ const TextArea = ({ label, name, validators, helptext, textareaClass, id, disabl
                 }
                 return (
                     <Textarea
-                        value={value}
+                        value={textAreaValue}
                         label={label}
                         maxLength={0}
                         feil={errors[name]?.message}

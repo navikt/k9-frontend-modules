@@ -10,7 +10,7 @@ import YesOrNoQuestion from './wrappers/YesOrNoQuestion';
 import { Box, Margin, Form } from '@navikt/k9-react-components';
 
 export default {
-    title: 'React Components',
+    title: 'Form Components',
     component: Form,
 };
 
