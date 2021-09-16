@@ -95,6 +95,8 @@ class Autocomplete extends React.Component<AutocompleteProps, State> {
                     // avoid form submission when user selects a suggestion
                     event.preventDefault();
                     this.setValue(suggestions[activeSuggestionIndex]);
+                } else if (shouldShowSuggestions && suggestions.length === 1) {
+                    this.setValue(suggestions[0]);
                 } else {
                     this.setState({
                         shouldShowSuggestions: false,
