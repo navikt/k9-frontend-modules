@@ -1,6 +1,7 @@
 import Spinner from 'nav-frontend-spinner';
 import React from 'react';
 import PageError from '../page-error/PageError';
+import './pageContainer.less';
 
 interface PageContainerProps {
     isLoading?: boolean;
@@ -14,7 +15,7 @@ const PageContainer = ({ isLoading, hasError, preventUnmount, children }: PageCo
 
     const renderChildrenContent = () => {
         if (preventUnmount) {
-            return <div style={{ display: shouldHideChildren ? 'none' : '' }}>{children}</div>;
+            return <div className={shouldHideChildren ? 'visuallyHidden' : ''}>{children}</div>;
         }
         if (shouldHideChildren) {
             return null;
