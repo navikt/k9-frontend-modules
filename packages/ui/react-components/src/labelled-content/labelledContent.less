@@ -1,9 +1,15 @@
-.labelledContent {
-  &__label {
-    font-weight: bold;
-  }
+@import (reference) '~nav-frontend-core/less/_variabler';
 
-  &__content {
-    margin-top: 0.5rem;
-  }
+.labelledContent {
+    &__label {
+        font-weight: bold;
+    }
+
+    &__content {
+        margin-top: 0.5rem;
+    }
+    &__indentation {
+        border-left: 4px solid @navGra20;
+        padding: 3px 0 3px 13px;
+    }
 }

@@ -1,82 +1,71 @@
 {
-    "name": "@navikt/k9-form-utils",
-    "version": "1.0.0",
-    "scripts": {
-        "build": "rollup -c rollup.config.js",
-        "clean": "rm -rf ./dist ./node_modules",
-        "storybook": "start-storybook -p 7003 --ci",
-        "test": "jest --passWithNoTests"
-    },
-    "author": "NAV IT",
-    "license": "MIT",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "files": [
-        "dist",
-        "index.ts",
-        "package.json"
-    ],
-    "devDependencies": {
-        "@navikt/fnrvalidator": "^1.1.4",
-        "@storybook/react": "^6.3.7",
-        "classnames": "^2.3.1",
-        "dayjs": "^1.10.6",
-        "lodash.throttle": "^4.1.1",
-        "nav-datovelger": "^12.1.1",
-        "nav-frontend-core": "^6.0.1",
-        "nav-frontend-js-utils": "^1.0.19",
-        "nav-frontend-knapper": "^3.1.1",
-        "nav-frontend-knapper-style": "^2.1.1",
-        "nav-frontend-lenker": "^2.0.1",
-        "nav-frontend-lenker-style": "^2.0.1",
-        "nav-frontend-paneler-style": "^2.0.1",
-        "nav-frontend-skjema": "^4.0.2",
-        "nav-frontend-skjema-style": "^3.0.1",
-        "nav-frontend-typografi": "^4.0.1",
-        "nav-frontend-typografi-style": "^2.0.1",
-        "prop-types": "^15.7.2",
-        "react": "^17.0.2",
-        "react-day-picker": "^7.4.10",
-        "react-dom": "^17.0.2",
-        "react-hook-form": "^7.14.2"
-    },
-    "peerDependencies": {
-        "@navikt/fnrvalidator": "^1.1.4",
-        "classnames": "^2.3.1",
-        "dayjs": "^1.10.6",
-        "lodash.throttle": "^4.1.1",
-        "nav-datovelger": "^12.1.1",
-        "nav-frontend-core": "^6.0.1",
-        "nav-frontend-js-utils": "^1.0.19",
-        "nav-frontend-knapper": "^3.1.1",
-        "nav-frontend-knapper-style": "^2.1.1",
-        "nav-frontend-lenker": "^2.0.1",
-        "nav-frontend-lenker-style": "^2.0.1",
-        "nav-frontend-paneler-style": "^2.0.1",
-        "nav-frontend-skjema": "^4.0.2",
-        "nav-frontend-skjema-style": "^3.0.1",
-        "nav-frontend-typografi": "^4.0.1",
-        "nav-frontend-typografi-style": "^2.0.1",
-        "prop-types": "^15.7.2",
-        "react": "^17.0.2",
-        "react-day-picker": "^7.4.10",
-        "react-dom": "^17.0.2",
-        "react-hook-form": "^7.14.2"
-    },
-    "dependencies": {
-        "@navikt/k9-bem-utils": "^1.0.1",
-        "@navikt/k9-period-utils": "^0.0.8",
-        "@navikt/k9-react-components": "^0.1.4"
-    },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/navikt/k9-frontend-modules"
-    },
-    "exports": {
-        "require": "./dist/index.cjs.js",
-        "import": "./dist/index.js"
-    }
+	"name": "@navikt/k9-form-utils",
+	"version": "1.0.0",
+	"author": "NAV IT",
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"index.ts",
+		"package.json"
+	],
+	"devDependencies": {
+		"@navikt/fnrvalidator": "^1.1.4",
+		"@storybook/react": "^6.3.7",
+		"classnames": "^2.3.1",
+		"dayjs": "^1.10.6",
+		"lodash.throttle": "^4.1.1",
+		"nav-datovelger": "^12.1.1",
+		"nav-frontend-core": "^6.0.1",
+		"nav-frontend-js-utils": "^1.0.19",
+		"nav-frontend-knapper": "^3.1.1",
+		"nav-frontend-knapper-style": "^2.1.1",
+		"nav-frontend-lenker": "^2.0.1",
+		"nav-frontend-lenker-style": "^2.0.1",
+		"nav-frontend-paneler-style": "^2.0.1",
+		"nav-frontend-skjema": "^4.0.2",
+		"nav-frontend-skjema-style": "^3.0.1",
+		"nav-frontend-typografi": "^4.0.1",
+		"nav-frontend-typografi-style": "^2.0.1",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2",
+		"react-day-picker": "^7.4.10",
+		"react-dom": "^17.0.2",
+		"react-hook-form": "^7.14.2"
+	},
+	"peerDependencies": {
+		"@navikt/fnrvalidator": "^1.1.4",
+		"classnames": "^2.3.1",
+		"dayjs": "^1.10.6",
+		"lodash.throttle": "^4.1.1",
+		"nav-datovelger": "^12.1.1",
+		"nav-frontend-core": "^6.0.1",
+		"nav-frontend-js-utils": "^1.0.19",
+		"nav-frontend-knapper": "^3.1.1",
+		"nav-frontend-knapper-style": "^2.1.1",
+		"nav-frontend-lenker": "^2.0.1",
+		"nav-frontend-lenker-style": "^2.0.1",
+		"nav-frontend-paneler-style": "^2.0.1",
+		"nav-frontend-skjema": "^4.0.2",
+		"nav-frontend-skjema-style": "^3.0.1",
+		"nav-frontend-typografi": "^4.0.1",
+		"nav-frontend-typografi-style": "^2.0.1",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2",
+		"react-day-picker": "^7.4.10",
+		"react-dom": "^17.0.2",
+		"react-hook-form": "^7.14.2"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/navikt/k9-frontend-modules"
+	},
+	"exports": {
+		"require": "./dist/index.cjs.js",
+		"import": "./dist/index.js"
+	}
 }
