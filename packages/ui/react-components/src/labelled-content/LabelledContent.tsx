@@ -10,9 +10,8 @@ export interface LabelledContentProps {
     indentContent?: boolean;
 }
 
-const LabelledContent = ({ label, content, labelTag, indentContent = false }: LabelledContentProps) => {
-    const cl = classNames({
-        labelledContent__content: true,
+const LabelledContent = ({ label, content, labelTag, indentContent }: LabelledContentProps) => {
+    const cl = classNames('labelledContent__content', {
         labelledContent__indentation: indentContent,
     });
     return (
