@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-react-components",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
@@ -83,8 +83,10 @@
         }
     },
     "dependencies": {
+        "@navikt/ds-icons": "^0.5.5",
         "@navikt/k9-bem-utils": "^1.0.1",
-        "@navikt/k9-period-utils": "^0.0.8"
+        "@navikt/k9-period-utils": "^0.0.8",
+        "@navikt/k9-date-utils": "^0.0.5"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"

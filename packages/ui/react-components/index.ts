@@ -34,6 +34,7 @@ export { default as EmptyPersonCard } from './src/person-card/EmptyPersonCard';
 export { default as SystemButton } from './src/system-button/SystemButton';
 export { default as UserPanel } from './src/user-panel/UserPanel';
 export { default as Infostripe } from './src/infostripe/Infostripe';
+export { default as AssessedBy } from './src/assessed-by/AssessedBy';
 
 /** Ikoner **/
 export { default as ArrowIcon } from './src/icons/ArrowIcon';
