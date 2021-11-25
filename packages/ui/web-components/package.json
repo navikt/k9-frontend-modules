@@ -1,31 +1,37 @@
 {
-	"name": "@navikt/web-components",
-	"version": "0.0.1",
-	"author": "NAV",
-	"license": "MIT",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"peerDependencies": {
-		"lit-element": "^2.4.0",
-		"lit-html": "^1.3.0"
-	},
-	"devDependencies": {
-		"@storybook/addon-actions": "^6.3.0-alpha.14",
-		"@storybook/addon-essentials": "^6.3.0-alpha.14",
-		"@storybook/addon-links": "^6.3.0-alpha.14",
-		"@storybook/web-components": "^6.3.0-alpha.14",
-		"lit-element": "^2.4.0",
-		"lit-html": "^1.3.0"
-	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/navikt/k9-frontend-modules"
-	},
-	"exports": {
-		"require": "./dist/index.cjs.js",
-		"import": "./dist/index.js"
-	}
+    "name": "@navikt/web-components",
+    "version": "0.0.1",
+    "author": "NAV",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf ./dist ./node_modules",
+        "storybook": "start-storybook -p 7002 --ci",
+        "test": "jest --passWithNoTests"
+    },
+    "peerDependencies": {
+        "lit-element": "^2.4.0",
+        "lit-html": "^1.3.0"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.3.0-alpha.14",
+        "@storybook/addon-essentials": "^6.3.0-alpha.14",
+        "@storybook/addon-links": "^6.3.0-alpha.14",
+        "@storybook/web-components": "^6.3.0-alpha.14",
+        "lit-element": "^2.4.0",
+        "lit-html": "^1.3.0"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/navikt/k9-frontend-modules"
+    },
+    "exports": {
+        "require": "./dist/index.cjs.js",
+        "import": "./dist/index.js"
+    }
 }
