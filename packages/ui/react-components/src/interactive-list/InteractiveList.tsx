@@ -18,6 +18,7 @@ const InteractiveListElement = (props: InteractiveListElement) => {
     const { content, active, onClick } = props;
     const cls = classnames('interactiveListElement', {
         ['interactiveListElement--active']: active === true,
+        ['interactiveListElement--inactive']: active === false,
     });
 
     return (
