@@ -17,7 +17,8 @@ interface InteractiveListProps {
 const InteractiveListElement = (props: InteractiveListElement) => {
     const { content, active, onClick } = props;
     const cls = classnames('interactiveListElement', {
-        ['interactiveListElement--active']: active === true,
+        ['interactiveListElement--active']: active,
+        ['interactiveListElement--inactive']: !active,
     });
 
     return (
