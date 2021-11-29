@@ -8,10 +8,6 @@
     border-bottom: 1px solid #c6c2bf;
     position: relative;
 
-    &:focus-visible {
-        outline: #0067c5 auto 1px;
-    }
-
     &:first-of-type {
         border-top: 1px solid #c6c2bf;
     }
@@ -63,6 +59,10 @@
     width: 100%;
     outline: none;
     cursor: pointer;
+
+    &:focus-visible {
+        outline: #0067c5 auto 1px;
+    }
 
     &__contentContainer {
         display: flex;
