@@ -5,6 +5,7 @@ import { Controller, useFormContext } from 'react-hook-form';
 interface RadioProps {
     value: string;
     label: React.ReactNode;
+    id?: string;
 }
 
 interface RadioGroupPanelProps {
@@ -37,7 +38,7 @@ const RadioGroupPanel = ({ question, name, validators, radios, onChange, disable
                         {radios.map((radio) => (
                             <Radio
                                 key={radio.value}
-                                id={radio.value}
+                                id={radio.id || radio.value}
                                 label={radio.label}
                                 name={name}
                                 onChange={() => {
