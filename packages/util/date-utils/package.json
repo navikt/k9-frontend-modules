@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-date-utils",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -16,10 +16,10 @@
         "test-watch": "jest --watch"
     },
     "devDependencies": {
-        "dayjs": "^1.10.4"
+        "dayjs": "^1.10.5"
     },
     "peerDependencies": {
-        "dayjs": "^1.10.4"
+        "dayjs": "^1.10.5"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
