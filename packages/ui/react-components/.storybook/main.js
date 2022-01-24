@@ -1,5 +1,5 @@
 const path = require('path');
-const CORE_DIR = path.resolve(__dirname, '../node_modules');
+const CORE_DIR = path.resolve(__dirname, '../../../../packages');
 
 module.exports = {
     stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
