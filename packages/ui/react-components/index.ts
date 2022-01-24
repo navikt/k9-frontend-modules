@@ -35,6 +35,12 @@ export { default as SystemButton } from './src/system-button/SystemButton';
 export { default as UserPanel } from './src/user-panel/UserPanel';
 export { default as Infostripe } from './src/infostripe/Infostripe';
 export { default as AssessedBy } from './src/assessed-by/AssessedBy';
+export { default as AddButton } from './src/add-button/AddButton';
+export { default as DeleteButton } from './src/delete-button/DeleteButton';
+export { default as UstrukturertDokumentElement } from './src/ustrukturert-dokument-element/UstrukturertDokumentElement';
+export { default as StrukturertDokumentElement } from './src/strukturet-dokument-element/StrukturertDokumentElement';
+export { default as Dokumentfilter } from './src/dokumentfilter/Dokumentfilter';
+export { default as ModalFormWrapper } from './src/module-form-wrapper/ModalFormWrapper';
 
 /** Ikoner **/
 export { default as ArrowIcon } from './src/icons/ArrowIcon';
