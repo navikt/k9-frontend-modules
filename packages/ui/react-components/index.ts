@@ -41,6 +41,8 @@ export { default as UstrukturertDokumentElement } from './src/ustrukturert-dokum
 export { default as StrukturertDokumentElement } from './src/strukturet-dokument-element/StrukturertDokumentElement';
 export { default as Dokumentfilter } from './src/dokumentfilter/Dokumentfilter';
 export { default as ModalFormWrapper } from './src/module-form-wrapper/ModalFormWrapper';
+export { default as Dokumentnavigasjon } from './src/dokumentnavigasjon/Dokumentnavigasjon';
+
 
 /** Ikoner **/
 export { default as ArrowIcon } from './src/icons/ArrowIcon';
