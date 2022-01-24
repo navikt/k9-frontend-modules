@@ -1,4 +1,5 @@
 const path = require('path');
+const CORE_DIR = path.resolve(__dirname, '../node_modules');
 
 module.exports = {
     stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -10,7 +11,7 @@ module.exports = {
         config.module.rules.push({
             test: /\.less$/,
             use: ['style-loader', 'css-loader', 'less-loader'],
-            include: [path.resolve(__dirname, '../src'), /node_modules\/nav-*/, /node_modules\/@navikt/],
+            include: [path.resolve(__dirname, '../src'), CORE_DIR],
         });
 
         config.resolve.extensions.push('.less');
