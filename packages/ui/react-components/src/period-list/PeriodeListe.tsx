@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { CalendarIcon } from '@navikt/k9-react-components';
 import { Period, sortPeriodsByFomDate } from '@navikt/k9-period-utils';
 import { Heading, Label, BodyShort } from '@navikt/ds-react';
+
+import CalendarIcon from '../icons/CalendarIcon';
 import './periodeListe.less';
 
 type Item = {
