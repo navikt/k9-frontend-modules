@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-react-components",
-    "version": "0.1.15",
+    "version": "0.1.16",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
