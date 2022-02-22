@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "@navikt/k9-array-utils": "^0.0.1",
-        "@navikt/k9-date-utils": "^0.0.5"
+        "@navikt/k9-date-utils": "^0.0.6"
     },
     "devDependencies": {
         "dayjs": "^1.10.4",
