@@ -48,7 +48,7 @@ const PeriodList = ({ perioder, tittel, customRenderFunc }: OwnProps) => {
                                 {!customRenderFunc ? (
                                     <div className={'content'}>
                                         {items.map((item) => (
-                                            <div className={'item'} key={item.label}>
+                                            <div className={'item'}>
                                                 <Label size="small">{item.label}</Label>
                                                 <BodyShort size="small">{item.value}</BodyShort>
                                             </div>
