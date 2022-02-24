@@ -7,6 +7,8 @@ export default {
     component: PeriodList,
 };
 
+export const Perioder = () => <PeriodList perioder={perioder} tittel={'Perioder'} />;
+
 const perioder = [
     {
         fom: '2022-02-16',
@@ -99,5 +101,3 @@ const perioder = [
         ],
     },
 ];
-
-export const Perioder = () => <PeriodList perioder={perioder} tittel={'Perioder'} />;
