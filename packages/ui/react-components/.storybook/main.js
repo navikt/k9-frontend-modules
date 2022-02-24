@@ -8,9 +8,9 @@ module.exports = {
             config.module.rules[ruleIndex].exclude = /node_modules/;
         });
         config.module.rules.push({
-            test: /\.less$/,
+            test: /\.(le|c)ss$/,
             use: ['style-loader', 'css-loader', 'less-loader'],
-            include: [path.resolve(__dirname, '../src'), /node_modules\/nav-*/],
+            include: [path.resolve(__dirname, '../src'), /node_modules\/nav-*/, /node_modules\/@navikt/],
         });
 
         config.resolve.extensions.push('.less');

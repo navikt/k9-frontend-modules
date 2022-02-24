@@ -21,12 +21,23 @@
             }
         }
         .content {
-            display: flex;
-            flex-direction: row;
-            gap: 10%;
-            &__item {
+            display: grid;
+            grid-template-columns: 0.125fr 0.125fr 1fr;
+
+            @media (max-width: 500px) {
+                grid-template-columns: 1fr;
+            }
+            .item {
                 :first-child {
                     margin-bottom: 0.4375rem;
+                }
+
+                @media (max-width: 500px) {
+                    margin-bottom: 0.4375rem;
+
+                    :first-child {
+                        margin-bottom: unset;
+                    }
                 }
             }
         }
