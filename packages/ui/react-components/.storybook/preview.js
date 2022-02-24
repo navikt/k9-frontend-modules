@@ -1,3 +1,4 @@
+import React from 'react';
 import '@navikt/ds-css';
 
 export const parameters = {
