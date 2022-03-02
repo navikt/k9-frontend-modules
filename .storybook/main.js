@@ -15,6 +15,9 @@ module.exports = {
             url: 'http://localhost:7003',
         },
     },
+    core: {
+        builder: 'webpack5',
+    },
     webpackFinal: async (config) => {
         config.module.rules.forEach((rule, ruleIndex) => {
             config.module.rules[ruleIndex].exclude = /node_modules/;
