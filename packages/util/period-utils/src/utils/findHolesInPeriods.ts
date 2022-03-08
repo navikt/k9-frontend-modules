@@ -8,7 +8,7 @@ const checkIfPeriodsAreEdgeToEdge = (period, otherPeriod) => {
     return dayAfterPeriod.isSame(startOfNextPeriod);
 };
 
-export const findHolesInPeriods = (periode: Period[]) => {
+const findHolesInPeriods = (periode: Period[]) => {
     const hull: Period[] = [];
     const sortedPeriods = periode.sort((p1, p2) => sortPeriodsByFomDate(p1, p2));
 
@@ -27,3 +27,5 @@ export const findHolesInPeriods = (periode: Period[]) => {
     });
     return hull;
 };
+
+export default findHolesInPeriods;

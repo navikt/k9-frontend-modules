@@ -1,5 +1,5 @@
 import Period from '../../types/Period';
-import { findHolesInPeriods } from '../findHolesInPeriods';
+import findHolesInPeriods from '../findHolesInPeriods';
 
 test('finnHullIPeriode', () => {
     const perioder = [new Period('2020-04-01', '06.04.2020'), new Period('2020-02-01', '06.02.2020')];
