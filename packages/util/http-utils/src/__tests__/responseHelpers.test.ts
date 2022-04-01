@@ -41,7 +41,7 @@ describe('responseHelpers', () => {
         it('should call the provided function with the expected arguments', () => {
             const errorResponse = { response: { status: 401, headers: { location: 'mockedLocation' } } };
             const errorHandler = jest.fn();
-            handleErrorExternally(errorResponse as AxiosError, errorHandler);
+            handleErrorExternally(errorResponse as any, errorHandler);
 
             const { calls } = errorHandler.mock;
             expect(calls.length).toBe(1);

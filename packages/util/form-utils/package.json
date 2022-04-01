@@ -1,6 +1,6 @@
 {
     "name": "@navikt/k9-form-utils",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "scripts": {
         "build": "rollup -c rollup.config.js",
         "clean": "rm -rf ./dist ./node_modules",
@@ -18,7 +18,7 @@
     ],
     "devDependencies": {
         "@navikt/fnrvalidator": "^1.2.0",
-        "@storybook/react": "^6.4.19",
+        "@storybook/react": "^6.4.20",
         "classnames": "^2.3.1",
         "dayjs": "^1.11.0",
         "lodash.throttle": "^4.1.1",
@@ -38,13 +38,13 @@
         "react": "^17.0.2",
         "react-day-picker": "^7.4.10",
         "react-dom": "^17.0.2",
-        "react-hook-form": "^7.28.1"
+        "react-hook-form": "^7.29.0"
     },
     "peerDependencies": {
-        "@navikt/fnrvalidator": "^1.2.0",
-        "classnames": "^2.3.1",
-        "dayjs": "^1.11.0",
-        "lodash.throttle": "^4.1.1",
+        "@navikt/fnrvalidator": "1.2.0",
+        "classnames": "2.3.1",
+        "dayjs": "1.11.0",
+        "lodash.throttle": "4.1.1",
         "nav-datovelger": "^12.1.2",
         "nav-frontend-core": "^6.0.1",
         "nav-frontend-js-utils": "^1.0.20",
@@ -61,12 +61,12 @@
         "react": "^17.0.2",
         "react-day-picker": "^7.4.10",
         "react-dom": "^17.0.2",
-        "react-hook-form": "^7.28.1"
+        "react-hook-form": "^7.29.0"
     },
     "dependencies": {
         "@navikt/k9-bem-utils": "^1.0.1",
-        "@navikt/k9-period-utils": "^0.0.9",
-        "@navikt/k9-react-components": "^0.1.16"
+        "@navikt/k9-period-utils": "^0.0.10",
+        "@navikt/k9-react-components": "^0.1.20"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"

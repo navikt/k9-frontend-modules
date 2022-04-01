@@ -2,7 +2,7 @@
     "name": "@navikt/k9-period-utils",
     "author": "NAV",
     "license": "MIT",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "A collection of period utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -19,14 +19,14 @@
     },
     "dependencies": {
         "@navikt/k9-array-utils": "^0.0.1",
-        "@navikt/k9-date-utils": "^0.0.6"
+        "@navikt/k9-date-utils": "^0.0.7"
     },
     "devDependencies": {
-        "dayjs": "^1.10.4",
+        "dayjs": "^1.11.0",
         "jest": "^26.6.3"
     },
     "peerDependencies": {
-        "dayjs": "^1.10.4"
+        "dayjs": "1.11.0"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
