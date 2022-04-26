@@ -60,7 +60,7 @@ class AutocompleteSuggestion extends React.Component<Props, State> {
                 {matchFound ? (
                     <span
                         className={`${styles.autocompleteSuggestion__inner} ${
-                            active && styles['autocompleteSuggestion--active']
+                            active ? styles['autocompleteSuggestion--active'] : ''
                         }`}
                     >
                         {value.substring(0, match.length)}
@@ -71,7 +71,7 @@ class AutocompleteSuggestion extends React.Component<Props, State> {
                 ) : (
                     <span
                         className={`${styles.autocompleteSuggestion__inner} ${
-                            active && styles['autocompleteSuggestion--active']
+                            active ? styles['autocompleteSuggestion--active'] : ''
                         }`}
                     >
                         {value}
