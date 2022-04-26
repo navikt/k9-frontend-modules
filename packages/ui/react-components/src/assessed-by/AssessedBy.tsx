@@ -1,7 +1,7 @@
 import React from 'react';
 import { CaseworkerFilled } from '@navikt/ds-icons';
 import { prettifyDateString } from '@navikt/k9-date-utils';
-import './assessedBy.less';
+import styles from './assessedBy.less';
 
 interface IAssessedByProps {
     name?: string;
@@ -13,7 +13,7 @@ export default function AssessedBy({ name, date }: IAssessedByProps) {
         return null;
     }
     return (
-        <div className={'assessed-by'}>
+        <div className={styles['assessed-by']}>
             <CaseworkerFilled height="1.5em" width="1.5em" />
             <span>{`Vurdering av ${name ? name : ''}${date ? `, ${prettifyDateString(date)}` : ''}`}</span>
         </div>

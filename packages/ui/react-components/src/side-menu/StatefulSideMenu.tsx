@@ -1,7 +1,7 @@
 import React from 'react';
 import SideMenu, { Link, ThemeProp } from './SideMenu';
 
-interface StatefulSideMenuProps {
+export interface StatefulSideMenuProps {
     heading?: string;
     links: Link[];
     onClick: (index: number) => void;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './linkButton.less';
+import styles from './linkButton.less';
 
 export interface LinkButtonProps {
     onClick: () => void;
@@ -8,7 +8,7 @@ export interface LinkButtonProps {
 }
 
 const LinkButton = ({ className, onClick, children }: LinkButtonProps) => {
-    const cls = `${className || ''} linkButton`;
+    const cls = `${className || ''} ${styles.linkButton}`;
     return (
         <button type="button" className={cls} onClick={onClick}>
             {children}

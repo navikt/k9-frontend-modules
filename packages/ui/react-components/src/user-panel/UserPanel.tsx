@@ -2,7 +2,7 @@ import React from 'react';
 import bem from '@navikt/k9-bem-utils';
 import { NedChevron, OppChevron } from 'nav-frontend-chevron';
 import { Normaltekst as Text } from 'nav-frontend-typografi';
-import './userPanel.less';
+import styles from './userPanel.less';
 
 const userCls = bem('user');
 
@@ -20,30 +20,30 @@ const UserPanel: React.FunctionComponent<UserPanelProps> = ({ name, unit, onClic
                 <button
                     onClick={onClick}
                     type="button"
-                    className={userCls.block}
+                    className={styles[userCls.block]}
                     aria-haspopup="dialog"
                     aria-expanded={isToggled}
                 >
                     <span>
-                        <Text tag="span" className={userCls.element('name')}>
+                        <Text tag="span" className={styles[userCls.element('name')]}>
                             {name}
                         </Text>
                         {unit && (
-                            <Text tag="span" className={userCls.element('unit')}>
+                            <Text tag="span" className={styles[userCls.element('unit')]}>
                                 {unit}
                             </Text>
                         )}
                     </span>
                     {isToggled ? (
-                        <OppChevron className={userCls.element('chevron')} />
+                        <OppChevron className={styles[userCls.element('chevron')]} />
                     ) : (
-                        <NedChevron className={userCls.element('chevron')} />
+                        <NedChevron className={styles[userCls.element('chevron')]} />
                     )}
                 </button>
             ) : (
-                <div className={userCls.block}>
-                    <Text className={userCls.element('name')}>{name}</Text>
-                    {unit && <Text className={userCls.element('unit')}>{unit}</Text>}
+                <div className={styles[userCls.block]}>
+                    <Text className={styles[userCls.element('name')]}>{name}</Text>
+                    {unit && <Text className={styles[userCls.element('unit')]}>{unit}</Text>}
                 </div>
             )}
         </>

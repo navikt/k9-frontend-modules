@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { Normaltekst } from 'nav-frontend-typografi';
 import StepIcon from './StepIcon';
 import StepType from './StepType';
-import './step.less';
+import styles from './step.less';
 
 export interface StepProps {
     label: string;
@@ -23,6 +23,7 @@ interface ComponentProps {
 
 const stepCls = bem('step');
 
+// eslint-disable-next-line react/display-name
 export const Step = React.memo(
     ({
         label,
@@ -39,20 +40,31 @@ export const Step = React.memo(
             onClick(index);
         };
 
-        const stepIndicatorCls = classnames(stepCls.elementWithModifier('indicator', type), {
-            [stepCls.elementWithModifier('indicator', 'active')]: isActive,
-            [stepCls.elementWithModifier('indicator', 'partial')]: usePartialStatus,
-        });
+        const stepIndicatorCls = classnames(
+            `${styles[stepCls.element('indicator')]} ${styles[`step__indicator--${type}`]}`,
+            {
+                [styles['step__indicator--active']]: isActive,
+                [styles['step__indicator--partial']]: usePartialStatus,
+            }
+        );
 
         return (
-            <li key={label.split(' ').join('')} className={stepCls.block} aria-current={isActive ? 'step' : undefined}>
+            <li
+                key={label.split(' ').join('')}
+                className={styles[stepCls.block]}
+                aria-current={isActive ? 'step' : undefined}
+            >
                 <button
-                    className={isActive ? stepCls.elementWithModifier('button', 'active') : stepCls.element('button')}
+                    className={
+                        isActive
+                            ? `${styles[stepCls.element('button')]} ${styles[`step__button--active`]}`
+                            : styles[stepCls.element('button')]
+                    }
                     type="button"
                     onClick={handleButtonClick}
                     data-tooltip={label}
                 >
-                    <span className={stepCls.element('text-icon-container')}>
+                    <span className={styles[stepCls.element('text-icon-container')]}>
                         <StepIcon
                             type={type}
                             isFinished={isFinished}
@@ -64,8 +76,8 @@ export const Step = React.memo(
                     <span className={stepIndicatorCls} />
                 </button>
                 {isActive && (
-                    <div className={stepCls.element('arrow-container')}>
-                        <div className={stepCls.element('arrow')} />
+                    <div className={styles[stepCls.element('arrow-container')]}>
+                        <div className={styles[stepCls.element('arrow')]} />
                     </div>
                 )}
             </li>

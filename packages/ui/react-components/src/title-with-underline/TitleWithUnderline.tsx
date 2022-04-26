@@ -1,6 +1,6 @@
 import React from 'react';
 import { Undertittel as TitleComponent } from 'nav-frontend-typografi';
-import './titleWithUnderline.less';
+import styles from './titleWithUnderline.less';
 
 export interface TitleWithUnderlineProps {
     children: React.ReactNode;
@@ -10,7 +10,7 @@ export interface TitleWithUnderlineProps {
 
 const TitleWithUnderline = ({ children, titleClass, contentAfterTitleRenderer }: TitleWithUnderlineProps) => (
     <>
-        <div className="titleWithUnderline">
+        <div className={styles.titleWithUnderline}>
             <TitleComponent className={titleClass}>{children}</TitleComponent>
             {contentAfterTitleRenderer && contentAfterTitleRenderer()}
         </div>

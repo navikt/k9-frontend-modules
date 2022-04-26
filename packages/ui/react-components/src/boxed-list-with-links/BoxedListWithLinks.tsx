@@ -2,7 +2,7 @@ import React from 'react';
 import bem from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
 import BoxedList from './../boxed-list/BoxedList';
-import './boxedListWithLinks.less';
+import styles from './boxedListWithLinks.less';
 
 interface ListItemProps {
     /** Display name for link */
@@ -29,12 +29,12 @@ export const BoxedListWithLinks: React.FunctionComponent<BoxedListWithLinksProps
 }: BoxedListWithLinksProps) => (
     <BoxedList>
         {items.map(({ name, href, isExternal }, index) => (
-            <li className={listItemCls.block} key={href}>
+            <li className={styles[listItemCls.block]} key={href}>
                 <a
                     href={href}
-                    className={listItemCls.element('anchor')}
+                    className={styles[listItemCls.element('anchor')]}
                     target={isExternal ? '_blank' : ''}
-                    rel={isExternal ? 'noopener' : ''}
+                    rel={isExternal ? 'noopener noreferrer' : ''}
                     onClick={(e) => {
                         if (onClick) onClick(index, e);
                     }}

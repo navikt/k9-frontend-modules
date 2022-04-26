@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import './contentWithTooltip.less';
+import styles from './contentWithTooltip.less';
 
 interface ContentWithTooltipProps {
     tooltipText: string;
@@ -15,11 +15,11 @@ const ContentWithTooltip = ({
     children,
     inline,
 }: ContentWithTooltipProps): JSX.Element => {
-    const tooltipCls = classnames('contentWithTooltip__tooltipText', {
-        ['contentWithTooltip__tooltipText--right']: tooltipDirectionRight,
+    const tooltipCls = classnames(styles.contentWithTooltip__tooltipText, {
+        [styles['contentWithTooltip__tooltipText--right']]: tooltipDirectionRight,
     });
-    const containerCls = classnames('contentWithTooltip', {
-        ['contentWithTooltip--inline']: inline,
+    const containerCls = classnames(styles.contentWithTooltip, {
+        [styles['contentWithTooltip--inline']]: inline,
     });
     return (
         <div className={containerCls}>

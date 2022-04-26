@@ -2,7 +2,7 @@ import React from 'react';
 import bem from '@navikt/k9-bem-utils';
 import BoxedList from '../boxed-list/BoxedList';
 import { Normaltekst } from 'nav-frontend-typografi';
-import './boxedListWithSelection.less';
+import styles from './boxedListWithSelection.less';
 
 interface ListItemProps {
     name: string;
@@ -22,13 +22,15 @@ const BoxedListWithSelection: React.FunctionComponent<BoxedListWithSelectionProp
             <li
                 className={
                     selected
-                        ? `${boxedListWithSelectionItemCls.block} ${boxedListWithSelectionItemCls.modifier('selected')}`
-                        : boxedListWithSelectionItemCls.block
+                        ? `${styles[boxedListWithSelectionItemCls.block]} ${
+                              styles[boxedListWithSelectionItemCls.modifier('selected')]
+                          }`
+                        : styles[boxedListWithSelectionItemCls.block]
                 }
                 key={`${name}_${index}`}
             >
                 <button
-                    className={boxedListWithSelectionItemCls.element('button')}
+                    className={styles[boxedListWithSelectionItemCls.element('button')]}
                     aria-current={selected}
                     type="button"
                     onClick={(e) => onClick(index, e)}

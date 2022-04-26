@@ -5,7 +5,7 @@ import StepType from './StepType';
 import CheckIcon from './icons/CheckIcon';
 import WarningIcon from './icons/WarningIcon';
 import AvslåttValgIcon from './icons/AvslåttIcon';
-import './step.less';
+import styles from './step.less';
 
 interface StepIconProps {
     type: string;
@@ -23,24 +23,24 @@ const StepIcon = ({ type, isFinished, iconAltText, usePartialStatus }: StepIconP
     if (usePartialStatus) {
         return (
             <div
-                className={classnames(stepCls.elementWithModifier('icon', 'partial'), {
-                    [stepCls.elementWithModifier('icon', 'success')]: !isWarning && !isDanger,
-                    [stepCls.elementWithModifier('icon', 'warning')]: isWarning,
-                    [stepCls.elementWithModifier('icon', 'danger')]: isDanger,
+                className={classnames(`${styles[stepCls.element('icon')]} ${styles['step__icon--partial']}`, {
+                    [styles['step__icon--success']]: !isWarning && !isDanger,
+                    [styles['step__icon--warning']]: isWarning,
+                    [styles['step__icon--danger']]: isDanger,
                 })}
             />
         );
     }
     if (isFinished) {
-        return <CheckIcon className={stepCls.elementWithModifier('icon', 'success')} />;
+        return <CheckIcon className={`${styles[stepCls.element('icon')]} ${styles['step__icon--success']}`} />;
     }
     if (isWarning) {
-        return <WarningIcon className={stepCls.elementWithModifier('icon', 'warning')} />;
+        return <WarningIcon className={`${styles[stepCls.element('icon')]} ${styles['step__icon--warning']}`} />;
     }
     if (isDanger) {
-        return <AvslåttValgIcon className={stepCls.elementWithModifier('icon', 'danger')} />;
+        return <AvslåttValgIcon className={`${styles[stepCls.element('icon')]} ${styles['step__icon--danger']}`} />;
     }
-    return <span className={stepCls.element('icon-placeholder')} />;
+    return <span className={styles[stepCls.element('icon-placeholder')]} />;
 };
 
 export default StepIcon;

@@ -3,6 +3,7 @@ import bemUtils from '@navikt/k9-bem-utils';
 import { Normaltekst } from 'nav-frontend-typografi';
 import Card from './Card';
 import GenderIcon from './GenderIcon';
+import styles from './personCard.less';
 
 const personCardCls = bemUtils('personCard');
 
@@ -10,11 +11,11 @@ interface EmptyPersonCard {
     namePlaceholder: string;
 }
 
-const EmptyPersonCard = ({ namePlaceholder }) => (
+const EmptyPersonCard: React.FC<EmptyPersonCard> = ({ namePlaceholder }) => (
     <Card>
-        <div className={personCardCls.element('container')}>
+        <div className={styles[personCardCls.element('container')]}>
             <GenderIcon />
-            <Normaltekst tag="p" className={personCardCls.element('namePlaceholder')}>
+            <Normaltekst tag="p" className={styles[personCardCls.element('namePlaceholder')]}>
                 {namePlaceholder}
             </Normaltekst>
         </div>

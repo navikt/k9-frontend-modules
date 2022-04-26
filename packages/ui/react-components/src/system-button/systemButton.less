@@ -5,7 +5,7 @@
     border-right: 1px solid rgb(89, 81, 75);
 }
 
-.knapp.systems__button {
+.systems__button {
     border: 3px solid transparent;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -15,7 +15,7 @@
         fill: white;
     }
 
-    &.knapp--flat:focus:not(:disabled) {
+    &:global(.knapp--flat:focus:not(:disabled)) {
         border: 3px solid #ffa733;
         box-shadow: none;
     }
@@ -29,7 +29,7 @@
             fill: #3e3832;
         }
     }
-    &[aria-expanded='true'].knapp--flat:focus:not(:disabled) {
+    &[aria-expanded='true']:global(.knapp--flat:focus:not(:disabled)) {
         background-color: white;
         border-radius: 0;
         border: 3px solid #ffa733;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Collapse } from 'react-collapse';
 import ChevronIconBlue from '../icons/ChevronIconBlue';
-import './expandableLabel.less';
+import styles from './expandableLabel.less';
 
 interface HelptextProps {
     labelText: React.ReactNode;
@@ -12,14 +12,14 @@ interface HelptextProps {
 const ExpandableLabel = ({ helptext, labelText, labelFor }: HelptextProps): JSX.Element => {
     const [open, setOpen] = React.useState(false);
     return (
-        <div className="expandableLabel">
+        <div className={styles.expandableLabel}>
             <label htmlFor={labelFor}>{labelText}</label>
             <Collapse isOpened={open}>
-                <p className="expandableLabel__helptext">{helptext}</p>
+                <p className={styles.expandableLabel__helptext}>{helptext}</p>
             </Collapse>
 
             <button
-                className="expandableLabel__button"
+                className={styles.expandableLabel__button}
                 type="button"
                 onClick={() => setOpen(!open)}
                 aria-expanded={open}
@@ -27,7 +27,9 @@ const ExpandableLabel = ({ helptext, labelText, labelFor }: HelptextProps): JSX.
                 {open ? 'Lukk hjelpetekst' : 'Mer hjelpetekst'}
                 <span
                     className={
-                        open ? 'expandableLabel__chevron expandableLabel__chevron--open' : 'expandableLabel__chevron'
+                        open
+                            ? `${styles.expandableLabel__chevron} ${styles['expandableLabel__chevron--open']}`
+                            : styles.expandableLabel__chevron
                     }
                 >
                     <ChevronIconBlue />

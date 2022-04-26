@@ -5,6 +5,7 @@ import ChildIcon from './icons/Child';
 import ManIcon from './icons/Man';
 import WomanIcon from './icons/Woman';
 import UnknownIcon from './icons/Unknown';
+import styles from './personCard.less';
 
 const cardCls = bemUtils('personCard');
 
@@ -23,7 +24,13 @@ const GenderIcon = ({ gender, isChild }: GenderIconProps): JSX.Element => {
         icon = <WomanIcon />;
     }
     return (
-        <div className={!icon ? cardCls.elementWithModifier('gender-icon', 'unknown') : cardCls.element('gender-icon')}>
+        <div
+            className={
+                !icon
+                    ? `${styles[cardCls.element('gender-icon')]} ${styles['personCard__gender-icon--unknown']}`
+                    : styles[cardCls.element('gender-icon')]
+            }
+        >
             {icon || <UnknownIcon />}
         </div>
     );

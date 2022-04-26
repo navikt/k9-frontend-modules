@@ -1,10 +1,12 @@
 import React from 'react';
-import './boxedList.less';
+import styles from './boxedList.less';
 
 interface BoxedListProps {
     children: React.ReactNode;
 }
 
-const BoxedList: React.FunctionComponent<BoxedListProps> = ({ children }) => <ul className="boxedList">{children}</ul>;
+const BoxedList: React.FunctionComponent<BoxedListProps> = ({ children }) => (
+    <ul className={styles.boxedList}>{children}</ul>
+);
 
 export default BoxedList;

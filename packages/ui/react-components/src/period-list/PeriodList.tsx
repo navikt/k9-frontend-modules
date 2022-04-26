@@ -4,7 +4,7 @@ import { Period, sortPeriodsByFomDate } from '@navikt/k9-period-utils';
 import { Heading, Label, BodyShort } from '@navikt/ds-react';
 
 import CalendarIcon from '../icons/CalendarIcon';
-import './periodList.less';
+import styles from './periodList.less';
 
 type Item = {
     label: string;
@@ -33,22 +33,22 @@ const PeriodList = ({ perioder, tittel, customRenderFunc }: OwnProps) => {
                     {tittel}
                 </Heading>
             )}
-            <ul className={'periodList'}>
+            <ul className={styles.periodList}>
                 {perioder
                     .map((periode) => ({ period: new Period(periode.fom, periode.tom), items: periode.items }))
                     .sort((periode1, periode2) => sortPeriodsByFomDate(periode1.period, periode2.period))
                     .map((periode) => {
                         const { period, items = [] } = periode;
                         return (
-                            <li className={'element'} key={period.fom}>
-                                <div className={'title'}>
+                            <li className={styles.element} key={period.fom}>
+                                <div className={styles.title}>
                                     <CalendarIcon />
-                                    <span className={'period'}>{period.prettifyPeriod()}</span>
+                                    <span className={styles.period}>{period.prettifyPeriod()}</span>
                                 </div>
                                 {!customRenderFunc ? (
-                                    <div className={'content'}>
+                                    <div className={styles.content}>
                                         {items.map((item) => (
-                                            <div className={'item'} key={item.label}>
+                                            <div className={styles.item} key={item.label}>
                                                 <Label size="small">{item.label}</Label>
                                                 <BodyShort size="small">{item.value}</BodyShort>
                                             </div>

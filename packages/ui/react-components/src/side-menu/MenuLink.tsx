@@ -2,7 +2,7 @@ import bem from '@navikt/k9-bem-utils';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import React from 'react';
-import './menuLink.less';
+import styles from './menuLink.less';
 
 interface MenuLinkProps {
     label: string;
@@ -23,14 +23,16 @@ const MenuLink = ({ label, active, onClick, iconSrc, iconAltText, theme }: MenuL
     };
 
     const labelCls = classnames(
-        active ? menuLinkCls.elementWithModifier('label', 'active') : menuLinkCls.element('label'),
+        active
+            ? `${styles[menuLinkCls.element('label')]} ${styles['menuLink__label--active']}`
+            : styles[menuLinkCls.element('label')],
         {
-            [menuLinkCls.elementWithModifier('label', 'with-icon')]: !!iconSrc,
+            [styles['menuLink__label--with-icon']]: !!iconSrc,
         }
     );
 
-    const containerClassnames = classnames(menuLinkCls.block, {
-        [menuLinkCls.modifier('withArrows')]: arrowTheme,
+    const containerClassnames = classnames(styles[menuLinkCls.block], {
+        [styles[menuLinkCls.modifier('withArrows')]]: arrowTheme,
     });
 
     const labeltype = arrowTheme && active ? 'element' : 'normaltekst';
@@ -38,15 +40,21 @@ const MenuLink = ({ label, active, onClick, iconSrc, iconAltText, theme }: MenuL
     return (
         <li className={containerClassnames} aria-current={active ? true : undefined}>
             <button
-                className={active ? menuLinkCls.elementWithModifier('button', 'active') : menuLinkCls.element('button')}
+                className={
+                    active
+                        ? `${styles[menuLinkCls.element('button')]} ${styles['menuLink__button--active']}`
+                        : styles[menuLinkCls.element('button')]
+                }
                 onClick={handleOnClick}
                 type="button"
             >
                 <TypografiBase type={labeltype} tag="span" className={labelCls}>
                     {label}
-                    {iconSrc && <img src={iconSrc} alt={iconAltText || ''} className={menuLinkCls.element('icon')} />}
+                    {iconSrc && (
+                        <img src={iconSrc} alt={iconAltText || ''} className={styles[menuLinkCls.element('icon')]} />
+                    )}
                 </TypografiBase>
-                {arrowTheme && active && <span className={menuLinkCls.element('arrow-right')} />}
+                {arrowTheme && active && <span className={styles[menuLinkCls.element('arrow-right')]} />}
             </button>
         </li>
     );

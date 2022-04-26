@@ -1,5 +1,5 @@
 import React from 'react';
-import './basicList.less';
+import styles from './basicList.less';
 
 export interface BasicListProps {
     elements: React.ReactNode[];
@@ -7,9 +7,9 @@ export interface BasicListProps {
 
 const BasicList = ({ elements }: BasicListProps) => {
     return (
-        <ul className="basicList">
+        <ul className={styles.basicList}>
             {elements.map((element, index) => (
-                <li className="basicList__element" key={`element-${index}`}>
+                <li className={styles.basicList__element} key={`element-${index}`}>
                     {element}
                 </li>
             ))}

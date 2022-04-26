@@ -1,7 +1,7 @@
 import React from 'react';
 import { Suggestion } from './types/Suggestion';
 import AutocompleteSuggestion from './AutocompleteSuggestion';
-import './autocomplete.less';
+import styles from './autocomplete.less';
 
 export interface AutocompleteProps {
     onSelect: (value: Suggestion) => void;
@@ -198,7 +198,7 @@ class Autocomplete extends React.Component<AutocompleteProps, State> {
 
         return (
             <div
-                className="autocomplete"
+                className={styles.autocomplete}
                 aria-expanded={showSuggestions}
                 aria-owns={`${id}-suggestions`}
                 aria-haspopup="listbox"
@@ -221,13 +221,15 @@ class Autocomplete extends React.Component<AutocompleteProps, State> {
                     ref={(input) => {
                         this.inputRef = input;
                     }}
-                    className="autocomplete__input typo-normal"
+                    className={`${styles.autocomplete__input} typo-normal`}
                     autoFocus={shouldFocusOnMount}
                 />
                 <ul
                     id={`${id}-suggestions`}
                     role="listbox"
-                    className={showSuggestions ? 'autocomplete__suggestions' : 'autocomplete__suggestions--hidden'}
+                    className={
+                        showSuggestions ? styles.autocomplete__suggestions : styles['autocomplete__suggestions--hidden']
+                    }
                 >
                     {showSuggestions &&
                         suggestions.map((suggestion: Suggestion, index: number) => (
