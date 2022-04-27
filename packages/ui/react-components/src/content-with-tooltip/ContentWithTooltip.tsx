@@ -20,7 +20,7 @@ const ContentWithTooltip = ({
     const tooltipCls = classnames(styles.contentWithTooltip__tooltipText, {
         [styles['contentWithTooltip__tooltipText--right']]: tooltipDirectionRight,
     });
-    const containerCls = classnames(styles.contentWithTooltip, {
+    const containerCls = classnames(styles.contentWithTooltip, 'contentWithTooltip', {
         [styles['contentWithTooltip--inline']]: inline,
     });
     return (

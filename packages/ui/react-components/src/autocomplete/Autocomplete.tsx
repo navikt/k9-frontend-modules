@@ -198,7 +198,7 @@ class Autocomplete extends React.Component<AutocompleteProps, State> {
 
         return (
             <div
-                className={styles.autocomplete}
+                className={`${styles.autocomplete} autocomplete`}
                 aria-expanded={showSuggestions}
                 aria-owns={`${id}-suggestions`}
                 aria-haspopup="listbox"
