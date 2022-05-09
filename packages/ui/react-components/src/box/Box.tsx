@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import './box.less';
+import styles from './box.less';
 
 export enum Margin {
     small = 'small',
@@ -17,8 +17,8 @@ export interface BoxProps {
 }
 
 const Box = ({ children, marginBottom, marginTop }: BoxProps): JSX.Element => {
-    const marginTopClass = `${marginTop}MarginTop`;
-    const marginBottomClass = `${marginBottom}MarginBottom`;
+    const marginTopClass = styles[`${marginTop}MarginTop`];
+    const marginBottomClass = styles[`${marginBottom}MarginBottom`];
     const boxClassnames = classNames({
         [marginTopClass]: marginTop,
         [marginBottomClass]: marginBottom,

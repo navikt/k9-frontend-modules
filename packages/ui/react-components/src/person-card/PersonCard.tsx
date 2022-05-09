@@ -6,7 +6,7 @@ import Popover from '../popover/Popover';
 import Card from './Card';
 import GenderIcon from './GenderIcon';
 import Menu from './Menu';
-import './personCard.less';
+import styles from './personCard.less';
 
 export type GenderType = 'male' | 'female' | 'unknown';
 export enum Gender {
@@ -62,7 +62,9 @@ const PersonCard = ({
             <Normaltekst
                 tag="span"
                 className={
-                    isActive ? personCardCls.elementWithModifier('name', 'active') : personCardCls.element('name')
+                    isActive
+                        ? `${styles.personCard__name} ${styles['personCard__name--active']}`
+                        : styles[personCardCls.element('name')]
                 }
             >
                 {name}
@@ -72,11 +74,11 @@ const PersonCard = ({
 
     return (
         <Card active={isActive}>
-            <div className={personCardCls.element('name-gender-container')}>
+            <div className={styles[personCardCls.element('name-gender-container')]}>
                 <GenderIcon gender={gender} isChild={isChild} />
                 {url ? (
                     <a
-                        className={personCardCls.element('selector')}
+                        className={styles[personCardCls.element('selector')]}
                         aria-current={isActive}
                         href={url}
                         target="_blank"
@@ -85,13 +87,15 @@ const PersonCard = ({
                         {userDetails}
                     </a>
                 ) : (
-                    <p className={personCardCls.elementWithModifier('selector', 'inactive')}>{userDetails}</p>
+                    <p className={`${styles.personCard__selector} ${styles['personCard__selector--inactive']}`}>
+                        {userDetails}
+                    </p>
                 )}
             </div>
             {isChild ? (
                 <div>
                     {childAge && (
-                        <div className={personCardCls.element('child-age')}>
+                        <div className={styles[personCardCls.element('child-age')]}>
                             <Normaltekst tag="span">({childAge})</Normaltekst>
                         </div>
                     )}
@@ -99,7 +103,7 @@ const PersonCard = ({
             ) : (
                 <>
                     <Normaltekst tag="span">/</Normaltekst>
-                    <div className={personCardCls.element('container')}>
+                    <div className={styles[personCardCls.element('container')]}>
                         <Clipboard buttonLabel={`Kopier ${name}s fødselsnummer til utklippstavlen`}>
                             <Normaltekst>{fodselsnummer}</Normaltekst>
                         </Clipboard>
@@ -113,7 +117,7 @@ const PersonCard = ({
                                     popperProps={{
                                         children: (): React.ReactNode =>
                                             renderMenuContent && (
-                                                <div className={personCardCls.element('menu-container')}>
+                                                <div className={styles[personCardCls.element('menu-container')]}>
                                                     {renderMenuContent()}
                                                 </div>
                                             ),
@@ -122,7 +126,10 @@ const PersonCard = ({
                                     }}
                                     referenceProps={{
                                         children: ({ ref }): React.ReactNode => (
-                                            <div className={personCardCls.element('menu-button-container')} ref={ref}>
+                                            <div
+                                                className={styles[personCardCls.element('menu-button-container')]}
+                                                ref={ref}
+                                            >
                                                 <Menu onClick={onClick} isOpen={isMenuOpen} />
                                             </div>
                                         ),
@@ -132,7 +139,9 @@ const PersonCard = ({
                             </div>
                         )}
                         {renderLabelContent && (
-                            <div className={personCardCls.element('labelContainer')}>{renderLabelContent()}</div>
+                            <div className={styles[personCardCls.element('labelContainer')]}>
+                                {renderLabelContent()}
+                            </div>
                         )}
                     </div>
                 </>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sidetittel as PageTitle } from 'nav-frontend-typografi';
 import bem from '@navikt/k9-bem-utils';
-import './header.less';
+import styles from './header.less';
 
 interface HeaderProps {
     title: string;
@@ -11,23 +11,23 @@ interface HeaderProps {
 const headerCls = bem('header');
 export const Header: React.FunctionComponent<HeaderProps> = ({ title, titleHref, children }) => {
     return (
-        <header className={headerCls.block}>
-            <div className={headerCls.element('column')}>
+        <header className={styles[headerCls.block]}>
+            <div className={styles[headerCls.element('column')]}>
                 {titleHref ? (
-                    <a href={titleHref} className={headerCls.element('title-anchor')}>
-                        <PageTitle className={headerCls.element('title')}>
+                    <a href={titleHref} className={styles[headerCls.element('title-anchor')]}>
+                        <PageTitle className={styles[headerCls.element('title')]}>
                             NAV
-                            <span className={headerCls.element('subtitle')}>{title}</span>
+                            <span className={styles[headerCls.element('subtitle')]}>{title}</span>
                         </PageTitle>
                     </a>
                 ) : (
-                    <PageTitle className={headerCls.element('title')}>
+                    <PageTitle className={styles[headerCls.element('title')]}>
                         NAV
-                        <span className={headerCls.element('subtitle')}>{title}</span>
+                        <span className={styles[headerCls.element('subtitle')]}>{title}</span>
                     </PageTitle>
                 )}
             </div>
-            <div className={headerCls.element('column')}>{children}</div>
+            <div className={styles[headerCls.element('column')]}>{children}</div>
         </header>
     );
 };

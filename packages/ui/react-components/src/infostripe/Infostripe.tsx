@@ -1,5 +1,5 @@
 import React from 'react';
-import './infostripe.less';
+import styles from './infostripe.less';
 
 interface BaseInfostripeProps {
     iconRenderer: () => React.ReactNode;
@@ -15,10 +15,10 @@ interface TextInfostripeProps extends BaseInfostripeProps {
 }
 type InfostripeProps = ElementInfostripeProps | TextInfostripeProps;
 const Infostripe = ({ text, iconRenderer, element }: InfostripeProps) => (
-    <div className="infostripe">
-        <div className="infostripe__iconContainer">{iconRenderer()}</div>
-        <div className="infostripe__textContainer">
-            {element ? element : <p className="infostripe__text">{text}</p>}
+    <div className={styles.infostripe}>
+        <div className={styles.infostripe__iconContainer}>{iconRenderer()}</div>
+        <div className={styles.infostripe__textContainer}>
+            {element ? element : <p className={styles.infostripe__text}>{text}</p>}
         </div>
     </div>
 );

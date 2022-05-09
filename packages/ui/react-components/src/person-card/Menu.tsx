@@ -1,7 +1,7 @@
 import React from 'react';
 import bemUtils from '@navikt/k9-bem-utils';
 import OtherIcon from './icons/Other';
-import './menu.less';
+import styles from './menu.less';
 
 const menuCls = bemUtils('menu');
 
@@ -13,7 +13,7 @@ interface MenuProps {
 const Menu = ({ onClick, isOpen }: MenuProps): JSX.Element => {
     return (
         <button
-            className={menuCls.block}
+            className={styles[menuCls.block]}
             type="button"
             onClick={onClick}
             aria-haspopup="dialog"

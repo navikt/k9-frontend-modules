@@ -1,7 +1,7 @@
 import { Element } from 'nav-frontend-typografi';
 import React from 'react';
 import classNames from 'classnames';
-import './labelledContent.less';
+import styles from './labelledContent.less';
 
 export interface LabelledContentProps {
     label: string | React.ReactNode;
@@ -11,12 +11,12 @@ export interface LabelledContentProps {
 }
 
 const LabelledContent = ({ label, content, labelTag, indentContent }: LabelledContentProps) => {
-    const cl = classNames('labelledContent__content', {
-        labelledContent__indentation: indentContent,
+    const cl = classNames(styles.labelledContent__content, {
+        [styles.labelledContent__indentation]: indentContent,
     });
     return (
-        <div className="labelledContent">
-            <Element className="labelledContent__label" tag={labelTag || 'p'}>
+        <div className={styles.labelledContent}>
+            <Element className={styles.labelledContent__label} tag={labelTag || 'p'}>
                 {label}
             </Element>
             <div className={cl}>

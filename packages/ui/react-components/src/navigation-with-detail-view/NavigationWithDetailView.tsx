@@ -1,5 +1,5 @@
 import React from 'react';
-import './navigationWithDetailViewStyles.less';
+import styles from './navigationWithDetailViewStyles.less';
 
 export interface NavigationWithDetailViewProps {
     navigationSection: () => React.ReactNode;
@@ -13,9 +13,19 @@ const NavigationWithDetailView = ({
     showDetailSection,
 }: NavigationWithDetailViewProps) => {
     return (
-        <div className="navigationWithDetailView">
-            <div className="navigationWithDetailView__navigationSection">{navigationSection()}</div>
-            {showDetailSection && <div className="navigationWithDetailView__detailSection">{detailSection()}</div>}
+        <div className={styles.navigationWithDetailView}>
+            <div
+                className={`${styles.navigationWithDetailView__navigationSection} navigationWithDetailView__navigationSection`}
+            >
+                {navigationSection()}
+            </div>
+            {showDetailSection && (
+                <div
+                    className={`${styles.navigationWithDetailView__detailSection} navigationWithDetailView__detailSection`}
+                >
+                    {detailSection()}
+                </div>
+            )}
         </div>
     );
 };

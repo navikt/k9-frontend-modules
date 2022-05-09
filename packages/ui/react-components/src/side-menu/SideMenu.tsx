@@ -3,7 +3,7 @@ import { Normaltekst } from 'nav-frontend-typografi';
 import React from 'react';
 import classnames from 'classnames';
 import MenuLink from './MenuLink';
-import './sideMenu.less';
+import styles from './sideMenu.less';
 
 const sideMenuCls = bem('sideMenu');
 
@@ -24,14 +24,14 @@ interface SideMenuProps {
 }
 
 const SideMenu = ({ links, heading, onClick, theme }: SideMenuProps): JSX.Element => {
-    const sideMenuRootClassnames = classnames(sideMenuCls.block, {
-        [sideMenuCls.modifier(theme)]: theme,
+    const sideMenuRootClassnames = classnames(styles[sideMenuCls.block], {
+        [styles[sideMenuCls.modifier(theme)]]: theme,
     });
     return (
         <div className={sideMenuRootClassnames}>
-            <nav className={sideMenuCls.element('container')}>
-                {heading && <Normaltekst className={sideMenuCls.element('heading')}>{heading}</Normaltekst>}
-                <ul className={sideMenuCls.element('link-list')}>
+            <nav className={styles[sideMenuCls.element('container')]}>
+                {heading && <Normaltekst className={styles[sideMenuCls.element('heading')]}>{heading}</Normaltekst>}
+                <ul className={styles[sideMenuCls.element('link-list')]}>
                     {links.map(({ label, active, iconSrc, iconAltText }, index) => (
                         <MenuLink
                             key={label.split(' ').join('')}

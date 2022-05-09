@@ -1,23 +1,16 @@
 import React from 'react';
-import './indicatorWithOverlay.less';
+import styles from './indicatorWithOverlay.less';
 
 interface IndicatorWithOverlayProps {
     indicatorRenderer: () => React.ReactNode;
     overlayRenderer: () => React.ReactNode;
 }
 
-const IndicatorWithOverlay = ({
-    indicatorRenderer,
-    overlayRenderer,
-}: IndicatorWithOverlayProps) => {
+const IndicatorWithOverlay = ({ indicatorRenderer, overlayRenderer }: IndicatorWithOverlayProps) => {
     return (
-        <div className="indicatorWithOverlay">
-            <div className="indicatorWithOverlay__overlay">
-                {overlayRenderer()}
-            </div>
-            <div className="indicatorWithOverlay__indicator">
-                {indicatorRenderer()}
-            </div>
+        <div className={styles.indicatorWithOverlay}>
+            <div className={styles.indicatorWithOverlay__overlay}>{overlayRenderer()}</div>
+            <div className={styles.indicatorWithOverlay__indicator}>{indicatorRenderer()}</div>
         </div>
     );
 };

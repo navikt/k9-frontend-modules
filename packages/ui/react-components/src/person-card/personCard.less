@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
 
-        .arrow {
+        :global(.arrow) {
             position: absolute;
             width: 1rem;
             height: 1rem;
@@ -35,7 +35,7 @@
     }
 
     &__name {
-        &.typo-normal {
+        &:global(.typo-normal) {
             font-weight: 400;
             padding: 0 1.5px;
             color: #0067c5;
@@ -44,7 +44,7 @@
 
         &--active {
             text-decoration: none;
-            &.typo-normal {
+            &:global(.typo-normal) {
                 font-weight: 600;
                 color: black;
                 padding: 0;
@@ -116,7 +116,7 @@
             text-decoration: none;
             cursor: auto;
 
-            .typo-normal {
+            :global(.typo-normal) {
                 color: rgb(62, 56, 50);
             }
         }

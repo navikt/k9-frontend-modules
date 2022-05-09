@@ -2,7 +2,7 @@ import React from 'react';
 import bemUtils from '@navikt/k9-bem-utils';
 import ClipboardIcon from './ClipboardIcon';
 import copyContentsToClipboard from './util';
-import './clipboard.less';
+import styles from './clipboard.less';
 
 interface ClipboardProps {
     children: React.ReactNode;
@@ -29,12 +29,12 @@ const Clipboard = ({ children, buttonLabel = 'Kopier' }: ClipboardProps): JSX.El
         }
     }, [didCopy]);
 
-    const animationContainer = `${clipboardCls.element('animationContainer')} ${
-        shouldAnimate ? clipboardCls.element('animate') : ''
+    const animationContainer = `${styles[clipboardCls.element('animationContainer')]} ${
+        shouldAnimate ? styles[clipboardCls.element('animate')] : ''
     }`;
 
     return (
-        <div className={clipboardCls.block}>
+        <div className={styles[clipboardCls.block]}>
             <div ref={ref}>{children}</div>
             <button
                 data-tooltip={didCopy ? 'Kopiert!' : 'Kopier'}
@@ -43,14 +43,14 @@ const Clipboard = ({ children, buttonLabel = 'Kopier' }: ClipboardProps): JSX.El
                 data-class="typo-undertekst"
                 type="button"
                 aria-label={buttonLabel}
-                className={clipboardCls.element('button')}
+                className={styles[clipboardCls.element('button')]}
             >
                 <span className={animationContainer} key={didCopy ? 'check' : 'copy'}>
                     <ClipboardIcon type={didCopy ? 'check' : 'copy'} size={24} />
                 </span>
             </button>
             {didCopy && (
-                <span className={clipboardCls.element('kopiert')} aria-live="assertive">
+                <span className={styles[clipboardCls.element('kopiert')]} aria-live="assertive">
                     Kopiert!
                 </span>
             )}

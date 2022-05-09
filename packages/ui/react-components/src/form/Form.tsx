@@ -1,6 +1,6 @@
 import React from 'react';
 import { Hovedknapp, Knapp } from 'nav-frontend-knapper';
-import './form.less';
+import styles from './form.less';
 import Box, { Margin } from '../box/Box';
 
 export interface FormProps {
@@ -26,7 +26,7 @@ const Form = ({
         {children}
         {shouldShowSubmitButton !== false && (
             <Box marginTop={Margin.xxLarge}>
-                <div className="buttonContainer">
+                <div className={styles.buttonContainer}>
                     <Hovedknapp
                         id="submitButton"
                         disabled={submitButtonDisabled === true}
@@ -35,7 +35,7 @@ const Form = ({
                         {buttonLabel}
                     </Hovedknapp>
                     {onAvbryt && (
-                        <div className="buttonContainer__avbryt">
+                        <div className={styles.buttonContainer__avbryt}>
                             <Knapp htmlType="button" onClick={onAvbryt} disabled={cancelButtonDisabled === true}>
                                 Avbryt
                             </Knapp>

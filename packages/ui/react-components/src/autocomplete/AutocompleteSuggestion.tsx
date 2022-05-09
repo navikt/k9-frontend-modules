@@ -1,6 +1,6 @@
 import React from 'react';
 import { Suggestion } from './types/Suggestion';
-import './autocompleteSuggestion.less';
+import styles from './autocompleteSuggestion.less';
 
 interface Props {
     id: string;
@@ -58,12 +58,22 @@ class AutocompleteSuggestion extends React.Component<Props, State> {
                 className="autocompleteSuggestion typo-normal"
             >
                 {matchFound ? (
-                    <span className={`autocompleteSuggestion__inner ${active && 'autocompleteSuggestion--active'}`}>
+                    <span
+                        className={`${styles.autocompleteSuggestion__inner} ${
+                            active ? styles['autocompleteSuggestion--active'] : ''
+                        }`}
+                    >
                         {value.substring(0, match.length)}
-                        <span className="autocompleteSuggestion__substring">{value.substring(match.length)}</span>
+                        <span className={styles.autocompleteSuggestion__substring}>
+                            {value.substring(match.length)}
+                        </span>
                     </span>
                 ) : (
-                    <span className={`autocompleteSuggestion__inner ${active && 'autocompleteSuggestion--active'}`}>
+                    <span
+                        className={`${styles.autocompleteSuggestion__inner} ${
+                            active ? styles['autocompleteSuggestion--active'] : ''
+                        }`}
+                    >
                         {value}
                     </span>
                 )}

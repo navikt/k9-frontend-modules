@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import './interactiveList.less';
+import styles from './interactiveList.less';
 import ChevronIconBlack from '../icons/ChevronIconBlack';
 import ChevronIconGray from '../icons/ChevronIconGray';
 
@@ -16,17 +16,17 @@ interface InteractiveListProps {
 
 const InteractiveListElement = (props: InteractiveListElement) => {
     const { content, active, onClick } = props;
-    const cls = classnames('interactiveListElement', {
-        ['interactiveListElement--active']: active,
-        ['interactiveListElement--inactive']: !active,
+    const cls = classnames(styles.interactiveListElement, {
+        [styles['interactiveListElement--active']]: active,
+        [styles['interactiveListElement--inactive']]: !active,
     });
 
     return (
         <li className={cls}>
-            <button className="interactiveListElement__button" type="button" onClick={onClick}>
-                <span className="interactiveListElement__button__contentContainer">
+            <button className={styles.interactiveListElement__button} type="button" onClick={onClick}>
+                <span className={styles.interactiveListElement__button__contentContainer}>
                     {content}
-                    <span className="interactiveListElement__chevron">
+                    <span className={styles.interactiveListElement__chevron}>
                         {active ? <ChevronIconBlack /> : <ChevronIconGray />}
                     </span>
                 </span>
@@ -36,7 +36,7 @@ const InteractiveListElement = (props: InteractiveListElement) => {
 };
 
 const InteractiveList = ({ elements }: InteractiveListProps) => (
-    <ul className="interactiveList">
+    <ul className={styles.interactiveList}>
         {elements.map((elementProps) => (
             <InteractiveListElement {...elementProps} />
         ))}
