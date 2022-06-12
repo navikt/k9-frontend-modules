@@ -3,7 +3,7 @@ import { SkjemaelementFeilmelding, SkjemaGruppe } from 'nav-frontend-skjema';
 import React from 'react';
 import { Controller, useFieldArray, useFormContext } from 'react-hook-form';
 import PureDatepicker from '../pure/PureDatepicker';
-import './periodpickerList.less';
+import styles from './periodpickerList.less';
 import { Period } from '@navikt/k9-period-utils';
 import { Box, Margin } from '@navikt/k9-react-components';
 
@@ -51,7 +51,7 @@ const PeriodpickerList = ({
     const { fields } = fieldArrayMethods;
 
     return (
-        <div className="periodpickerList">
+        <div className={styles.periodpickerList}>
             {renderBeforeFieldArray && renderBeforeFieldArray(fieldArrayMethods)}
             <SkjemaGruppe legend={legend}>
                 {fields.map((item, index) => {
@@ -59,7 +59,7 @@ const PeriodpickerList = ({
                     const hasDefaultValue = defaultValues && defaultValues[index];
                     return (
                         <Box key={item.id} marginTop={Margin.medium}>
-                            <div className="periodpickerList__flexContainer">
+                            <div className={styles.periodpickerList__flexContainer}>
                                 <Controller
                                     name={`${name}[${index}].period`}
                                     rules={{ validate: { ...(validators || {}) } }}

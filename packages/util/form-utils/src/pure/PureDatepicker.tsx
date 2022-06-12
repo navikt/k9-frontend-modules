@@ -3,7 +3,7 @@ import { Datepicker } from 'nav-datovelger';
 import { CalendarPlacement } from 'nav-datovelger/lib/types';
 import { DatepickerProps } from 'nav-datovelger/lib/Datepicker';
 import { Label } from 'nav-frontend-skjema';
-import './datepicker.less';
+import styles from './datepicker.less';
 import { FieldError } from '@navikt/k9-react-components';
 
 interface CustomDatepickerProps {
@@ -33,7 +33,7 @@ const PureDatepicker = ({
     const dayPickerProps = { initialMonth: initialMonth ? new Date(initialMonth) : undefined };
 
     return (
-        <div className="datepicker">
+        <div className={styles.datepicker}>
             {label && <Label htmlFor={inputId}>{label}</Label>}
             <Datepicker
                 onChange={onChange}
