@@ -76,8 +76,8 @@ export const Step = React.memo(
                     <span className={stepIndicatorCls} />
                 </button>
                 {isActive && (
-                    <div className={styles[stepCls.element('arrow-container')]}>
-                        <div className={styles[stepCls.element('arrow')]} />
+                    <div className={`${styles[stepCls.element('arrow-container')]} step__arrow-container`}>
+                        <div className={`${styles[stepCls.element('arrow')]} step__arrow`} />
                     </div>
                 )}
             </li>
