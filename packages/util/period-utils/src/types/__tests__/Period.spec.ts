@@ -18,6 +18,17 @@ describe('Period tests', () => {
         });
     });
 
+    describe('prettifyPeriodYears', () => {
+        it('should prettify the period if it is within same year', () => {
+            const prettifiedYear = new Period(firstDayOf2028, tenthDayOf2028).prettifyPeriodYears();
+            expect(prettifiedYear).toEqual('2028');
+        });
+        it('should prettify the period if it spans several years', () => {
+            const prettifiedYear = new Period(lastDayOf2027, fifthDayOf2028).prettifyPeriodYears();
+            expect(prettifiedYear).toEqual('2027 - 2028');
+        });
+    });
+
     describe('includesDate', () => {
         it('should return true if the period includes the date in question', () => {
             expect(first10DaysOf2028.includesDate(firstDayOf2028)).toBe(true);

@@ -65,7 +65,7 @@
     },
     "dependencies": {
         "@navikt/k9-bem-utils": "^1.0.1",
-        "@navikt/k9-period-utils": "^0.0.11",
+        "@navikt/k9-period-utils": "^0.0.12",
         "@navikt/k9-react-components": "^0.2.2"
     },
     "publishConfig": {

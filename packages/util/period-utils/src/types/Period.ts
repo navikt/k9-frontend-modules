@@ -16,6 +16,15 @@ class Period {
         return `${prettifyDateString(this.fom)} - ${prettifyDateString(this.tom)}`;
     }
 
+    prettifyPeriodYears() {
+        const fomYear = initializeDate(this.fom).year();
+        const tomYear = initializeDate(this.tom).year();
+        if (fomYear == tomYear) {
+            return `${fomYear}`;
+        }
+        return `${fomYear} - ${tomYear}`;
+    }
+
     includesDate(dateString: string) {
         const dateInQuestion = initializeDate(dateString);
         const fomDayjs = initializeDate(this.fom);
