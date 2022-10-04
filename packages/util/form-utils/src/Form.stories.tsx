@@ -7,7 +7,7 @@ import PeriodpickerList from './wrappers/PeriodpickerList';
 import RadioGroupPanel from './wrappers/RadioGroupPanel';
 import TextArea from './wrappers/TextArea';
 import YesOrNoQuestion from './wrappers/YesOrNoQuestion';
-import { Box, Margin, Form } from '@navikt/k9-react-components';
+import { Box, Margin, Form } from '@navikt/ft-plattform-komponenter';
 
 export default {
     title: 'Form Components',

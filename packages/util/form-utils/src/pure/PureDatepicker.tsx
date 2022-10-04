@@ -4,7 +4,8 @@ import { CalendarPlacement } from 'nav-datovelger/lib/types';
 import { DatepickerProps } from 'nav-datovelger/lib/Datepicker';
 import { Label } from 'nav-frontend-skjema';
 import styles from './datepicker.less';
-import { FieldError } from '@navikt/k9-react-components';
+import { FieldError } from '@navikt/ft-plattform-komponenter';
+import '@navikt/ft-plattform-komponenter/dist/style.css';
 
 interface CustomDatepickerProps {
     label: string;

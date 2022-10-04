@@ -5,7 +5,8 @@ import { Controller, useFieldArray, useFormContext } from 'react-hook-form';
 import PureDatepicker from '../pure/PureDatepicker';
 import styles from './periodpickerList.less';
 import { Period } from '@navikt/k9-period-utils';
-import { Box, Margin } from '@navikt/k9-react-components';
+import { Box, Margin } from '@navikt/ft-plattform-komponenter';
+import '@navikt/ft-plattform-komponenter/dist/style.css';
 
 interface DatepickerProps {
     label?: string;
