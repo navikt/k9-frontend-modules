@@ -16,10 +16,10 @@
         "test-watch": "jest --watch"
     },
     "devDependencies": {
-        "dayjs": "^1.11.3"
+        "dayjs": "1.11.5"
     },
     "peerDependencies": {
-        "dayjs": "1.11.3"
+        "dayjs": "1.11.5"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
