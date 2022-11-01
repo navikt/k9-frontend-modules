@@ -1,8 +1,9 @@
-import React from 'react';
-import { Textarea } from 'nav-frontend-skjema';
-import { Controller, useFormContext } from 'react-hook-form';
-import { ExpandableLabel, Box, Margin } from '@navikt/ft-plattform-komponenter';
+import { ErrorMessage } from '@hookform/error-message';
+import { Textarea } from '@navikt/ds-react';
+import { Box, ExpandableLabel, Margin } from '@navikt/ft-plattform-komponenter';
 import '@navikt/ft-plattform-komponenter/dist/style.css';
+import React from 'react';
+import { Controller, useFormContext } from 'react-hook-form';
 
 interface TextAreaProps {
     label?: React.ReactNode;
@@ -17,7 +18,6 @@ interface TextAreaProps {
 const TextArea = ({ label, name, validators, helptext, textareaClass, id, disabled }: TextAreaProps): JSX.Element => {
     const { control, formState } = useFormContext();
     const { errors } = formState;
-
     return (
         <Controller
             control={control}
@@ -40,13 +40,14 @@ const TextArea = ({ label, name, validators, helptext, textareaClass, id, disabl
                                 <Textarea
                                     value={textAreaValue}
                                     maxLength={0}
-                                    feil={errors[name]?.message}
+                                    error={errors[name]?.message && <ErrorMessage errors={errors} name={name} />}
                                     name={name}
                                     onChange={onChange}
                                     id={id}
-                                    textareaClass={textareaClass}
+                                    className={textareaClass}
                                     autoComplete="off"
                                     disabled={disabled}
+                                    size="small"
                                 />
                             </Box>
                         </>
@@ -57,13 +58,14 @@ const TextArea = ({ label, name, validators, helptext, textareaClass, id, disabl
                         value={textAreaValue}
                         label={label}
                         maxLength={0}
-                        feil={errors[name]?.message}
+                        error={errors[name]?.message && <ErrorMessage errors={errors} name={name} />}
                         id={id}
                         name={name}
                         onChange={onChange}
-                        textareaClass={textareaClass}
+                        className={textareaClass}
                         autoComplete="off"
                         disabled={disabled}
+                        size="small"
                     />
                 );
             }}

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
-import { Checkbox, CheckboxGruppe, CheckboxProps } from 'nav-frontend-skjema';
+import { Checkbox, CheckboxGroup as DSCheckboxGroup } from '@navikt/ds-react';
+import { ErrorMessage } from '@hookform/error-message';
 
 interface CheckboxGroupProps {
     question: string;
     name: string;
-    checkboxes: CheckboxProps[];
+    checkboxes: { value: string; label: string | React.ReactNode }[];
     validators?: { [key: string]: (v: any) => string | boolean | undefined };
     disabled?: boolean;
 }
@@ -26,7 +27,11 @@ const CheckboxGroup = ({ question, checkboxes, name, validators, disabled }: Che
             render={({ field }) => {
                 const { name, value, onChange } = field;
                 return (
-                    <CheckboxGruppe legend={question} feil={errors[name]?.message}>
+                    <DSCheckboxGroup
+                        legend={question}
+                        error={errors[name]?.message && <ErrorMessage errors={errors} name={name} />}
+                        size="small"
+                    >
                         {checkboxes.map((checkboxProps) => (
                             <Checkbox
                                 {...checkboxProps}
@@ -43,9 +48,11 @@ const CheckboxGroup = ({ question, checkboxes, name, validators, disabled }: Che
                                 checked={value.indexOf(checkboxProps.value) >= 0}
                                 key={'' + checkboxProps.value}
                                 disabled={disabled}
-                            />
+                            >
+                                {checkboxProps.label}
+                            </Checkbox>
                         ))}
-                    </CheckboxGruppe>
+                    </DSCheckboxGroup>
                 );
             }}
         />

@@ -1,4 +1,5 @@
-import { RadioGruppe, Radio } from 'nav-frontend-skjema';
+import { Radio, RadioGroup } from '@navikt/ds-react';
+import { ErrorMessage } from '@hookform/error-message';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -34,12 +35,15 @@ const RadioGroupPanel = ({ question, name, validators, radios, onChange, disable
             render={(props) => {
                 const reactHookFormOnChange = props.field.onChange;
                 return (
-                    <RadioGruppe legend={question} feil={errors[name]?.message}>
+                    <RadioGroup
+                        legend={question}
+                        error={errors[name]?.message && <ErrorMessage errors={errors} name={name} />}
+                        size="small"
+                    >
                         {radios.map((radio) => (
                             <Radio
                                 key={radio.value}
-                                id={radio.id || radio.value}
-                                label={radio.label}
+                                id={radio.id || radio.value}
                                 name={name}
                                 onChange={() => {
                                     if (customOnChange) {
@@ -49,9 +53,12 @@ const RadioGroupPanel = ({ question, name, validators, radios, onChange, disable
                                 }}
                                 checked={radio.value === props.field.value}
                                 disabled={disabled}
-                            />
+                                value={radio.value}
+                            >
+                                {radio.label}
+                            </Radio>
                         ))}
-                    </RadioGruppe>
+                    </RadioGroup>
                 );
             }}
         />

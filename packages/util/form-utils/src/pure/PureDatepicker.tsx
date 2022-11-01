@@ -2,7 +2,7 @@ import React from 'react';
 import { Datepicker } from 'nav-datovelger';
 import { CalendarPlacement } from 'nav-datovelger/lib/types';
 import { DatepickerProps } from 'nav-datovelger/lib/Datepicker';
-import { Label } from 'nav-frontend-skjema';
+import { Label } from '@navikt/ds-react';
 import styles from './datepicker.less';
 import { FieldError } from '@navikt/ft-plattform-komponenter';
 import '@navikt/ft-plattform-komponenter/dist/style.css';
@@ -35,7 +35,11 @@ const PureDatepicker = ({
 
     return (
         <div className={styles.datepicker}>
-            {label && <Label htmlFor={inputId}>{label}</Label>}
+            {label && (
+                <Label htmlFor={inputId} size="small">
+                    {label}
+                </Label>
+            )}
             <Datepicker
                 onChange={onChange}
                 value={value}

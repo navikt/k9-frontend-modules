@@ -1,5 +1,5 @@
 import React from 'react';
-import { RadioGruppe, Radio } from 'nav-frontend-skjema';
+import { Radio, RadioGroup } from '@navikt/ds-react';
 
 interface YesOrNoQuestionProps {
     question: string;
@@ -31,21 +31,23 @@ const radios = [
 ];
 
 const PureYesOrNoQuestion = ({ question, value, onChange, name, errorMessage, disabled }: YesOrNoQuestionProps) => (
-    <RadioGruppe legend={question} feil={errorMessage}>
+    <RadioGroup legend={question} error={errorMessage} size="small">
         {radios.map((radio) => (
             <Radio
                 id={`${name}${radio.value}`}
                 key={radio.value}
-                label={radio.label}
                 name={name}
                 onChange={() => {
                     onChange(radio.value === YesOrNo.YES);
                 }}
                 checked={resolveYesOrNoLiteral(value) === radio.value}
                 disabled={disabled}
-            />
+                value={radio.value}
+            >
+                {radio.label}
+            </Radio>
         ))}
-    </RadioGruppe>
+    </RadioGroup>
 );
 
 export default PureYesOrNoQuestion;
