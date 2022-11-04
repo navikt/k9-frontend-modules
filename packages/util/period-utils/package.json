@@ -12,7 +12,7 @@
         "package.json"
     ],
     "scripts": {
-        "build": "rollup -c rollup.config.js",
+        "build": "rollup -c rollup.config.mjs",
         "clean": "rm -rf ./dist ./node_modules",
         "test": "jest --passWithNoTests",
         "test-watch": "jest --watch"

@@ -10,7 +10,7 @@
         "package.json"
     ],
     "scripts": {
-        "build": "rollup -c rollup.config.js",
+        "build": "rollup -c rollup.config.mjs",
         "clean": "rm -rf ./dist ./node_modules",
         "test": "jest --passWithNoTests",
         "test-watch": "jest --watch"
@@ -19,7 +19,7 @@
         "dayjs": "1.11.5"
     },
     "peerDependencies": {
-        "dayjs": "1.11.5"
+        "dayjs": "1.11.6"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
