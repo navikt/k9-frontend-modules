@@ -9,5 +9,5 @@
             "npmClientArgs": ["--no-lockfile"]
         }
     },
-    "packages": ["packages/ui/*", "packages/util/*"]
+    "packages": ["packages/util/*"]
 }

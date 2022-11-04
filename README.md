@@ -22,9 +22,9 @@ Det er ikke satt opp noen automatisk publisering av npm-moduler gjennom CI eller
 
 Hver npm-pakke har sitt eget build-script i en package.json, som kan kjøres for å lage et nytt bygg under `/dist`-mappa på rot av den aktuelle pakken. Når det er gjort kan man bumpe versjonsnummer i `package.json` og gjøre `npm publish` fra rot av den aktuelle pakken for å publisere den nye versjonen.
 
-Eksempel på publisering av @navikt/k9-react-components:
+Eksempel på publisering av @navikt/k9-form-utils:
 
-1. `cd ./packages/ui/react-components`
+1. `cd ./packages/util/form-utils`
 2. Gjør eventuelle endringer og bump versjon i `package.json`
 3. `npm run build`
 4. `npm publish`
