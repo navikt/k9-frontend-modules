@@ -1,5 +1,5 @@
 import postcss from 'rollup-plugin-postcss';
-import commonPackageBuild from './../../../config/commonPackageBuild.config';
+import commonPackageBuild from './../../../config/commonPackageBuild.config.mjs';
 
 commonPackageBuild.plugins.unshift(
     postcss({
