@@ -1,5 +1,5 @@
 {
-    "version": "0.0.3",
+    "version": "independent",
     "npmClient": "yarn",
     "command": {
         "publish": {
@@ -9,5 +9,6 @@
             "npmClientArgs": ["--no-lockfile"]
         }
     },
-    "packages": ["packages/util/*"]
+    "packages": ["packages/util/*"],
+    "useWorkspaces": true
 }

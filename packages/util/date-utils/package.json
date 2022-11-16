@@ -16,7 +16,7 @@
         "test-watch": "jest --watch"
     },
     "devDependencies": {
-        "dayjs": "1.11.5"
+        "dayjs": "1.11.6"
     },
     "peerDependencies": {
         "dayjs": "1.11.6"
