@@ -63,6 +63,7 @@ module.exports = {
         });
 
         config.resolve.extensions.push('.less');
+        config.devtool = 'eval-cheap-module-source-map';
 
         return config;
     },
