@@ -2,7 +2,7 @@
     "name": "@navikt/k9-http-utils",
     "author": "NAV",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A collection of HTTP utils",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -18,10 +18,10 @@
         "test-watch": "jest --watch"
     },
     "devDependencies": {
-        "axios": "1.2.3"
+        "axios": "1.2.2"
     },
     "peerDependencies": {
-        "axios": "1.2.3"
+        "axios": "1.2.2"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
