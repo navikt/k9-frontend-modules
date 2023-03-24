@@ -1,4 +1,8 @@
-# k9-frontend-modules
+# k9-frontend-modules er migrert til https://github.com/navikt/k9-saksbehandling-frontend
+
+
+
+# k9-frontend-modules (gammelt repo)
 
 Kildekode og publisering av npm-moduler til frontender i K9
 
